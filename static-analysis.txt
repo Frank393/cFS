@@ -1,0 +1,561 @@
+[34m[Static Analysis/Run cppcheck-2] [0m🧪  Matrix: map[cppcheck:cfe]
+[34m[Static Analysis/Run cppcheck-2] [0m🚀  Start image=ghcr.io/nmullane/cfs_image_test
+[33m[Static Analysis/Run cppcheck-1] [0m🧪  Matrix: map[cppcheck:bundle]
+[33m[Static Analysis/Run cppcheck-1] [0m🚀  Start image=ghcr.io/nmullane/cfs_image_test
+[35m[Static Analysis/Run cppcheck-3] [0m🧪  Matrix: map[cppcheck:osal]
+[35m[Static Analysis/Run cppcheck-3] [0m🚀  Start image=ghcr.io/nmullane/cfs_image_test
+[32m[Static Analysis/Run cppcheck-4] [0m🧪  Matrix: map[cppcheck:psp]
+[32m[Static Analysis/Run cppcheck-4] [0m🚀  Start image=ghcr.io/nmullane/cfs_image_test
+[34m[Static Analysis/Run cppcheck-2] [0m  🐳  docker run image=ghcr.io/nmullane/cfs_image_test platform= entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
+[35m[Static Analysis/Run cppcheck-3] [0m  🐳  docker run image=ghcr.io/nmullane/cfs_image_test platform= entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
+[33m[Static Analysis/Run cppcheck-1] [0m  🐳  docker run image=ghcr.io/nmullane/cfs_image_test platform= entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
+[32m[Static Analysis/Run cppcheck-4] [0m  🐳  docker run image=ghcr.io/nmullane/cfs_image_test platform= entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
+[34m[Static Analysis/Run cppcheck-2] [0m  🐳  docker exec cmd=[mkdir -m 0777 -p /var/run/act] user=root
+[32m[Static Analysis/Run cppcheck-4] [0m  🐳  docker exec cmd=[mkdir -m 0777 -p /var/run/act] user=root
+[33m[Static Analysis/Run cppcheck-1] [0m  🐳  docker exec cmd=[mkdir -m 0777 -p /var/run/act] user=root
+[35m[Static Analysis/Run cppcheck-3] [0m  🐳  docker exec cmd=[mkdir -m 0777 -p /var/run/act] user=root
+[34m[Static Analysis/Run cppcheck-2] [0m  🐳  docker cp src=/root/test/cFS/. dst=/root/test/cFS
+[34m[Static Analysis/Run cppcheck-2] [0m  🐳  docker exec cmd=[mkdir -p /root/test/cFS] user=
+[32m[Static Analysis/Run cppcheck-4] [0m  🐳  docker cp src=/root/test/cFS/. dst=/root/test/cFS
+[32m[Static Analysis/Run cppcheck-4] [0m  🐳  docker exec cmd=[mkdir -p /root/test/cFS] user=
+[33m[Static Analysis/Run cppcheck-1] [0m  🐳  docker cp src=/root/test/cFS/. dst=/root/test/cFS
+[33m[Static Analysis/Run cppcheck-1] [0m  🐳  docker exec cmd=[mkdir -p /root/test/cFS] user=
+[35m[Static Analysis/Run cppcheck-3] [0m  🐳  docker cp src=/root/test/cFS/. dst=/root/test/cFS
+[35m[Static Analysis/Run cppcheck-3] [0m  🐳  docker exec cmd=[mkdir -p /root/test/cFS] user=
+[34m[Static Analysis/Run cppcheck-2] [0m⭐  Run Install cppcheck
+[34m[Static Analysis/Run cppcheck-2] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/0] user=
+[32m[Static Analysis/Run cppcheck-4] [0m⭐  Run Install cppcheck
+[33m[Static Analysis/Run cppcheck-1] [0m⭐  Run Install cppcheck
+[32m[Static Analysis/Run cppcheck-4] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/0] user=
+[33m[Static Analysis/Run cppcheck-1] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/0] user=
+[35m[Static Analysis/Run cppcheck-3] [0m⭐  Run Install cppcheck
+[35m[Static Analysis/Run cppcheck-3] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/0] user=
+[34m|[0m Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 17%Reading package lists... 31%Reading package lists... 42%Reading package lists... 54%Reading package lists... 56%Reading package lists... 56%Reading package lists... 57%Reading package lists... 57%Reading package lists... 67%Reading package lists... 68%Reading package lists... 68%Reading package lists... 70%Reading package lists... 70%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 90%Reading package lists... 90%Reading package lists... 92%Reading package lists... 92%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+[33m|[0m Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 15%Reading package lists... 31%Reading package lists... 46%Reading package lists... 56%Reading package lists... 56%Reading package lists... 57%Reading package lists... 57%Reading package lists... 57%Reading package lists... 68%Reading package lists... 68%Reading package lists... 70%Reading package lists... 70%Reading package lists... 71%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 90%Reading package lists... 90%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+[35m|[0m Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 17%Reading package lists... 24%Reading package lists... 39%Reading package lists... 52%Reading package lists... 56%Reading package lists... 56%Reading package lists... 57%Reading package lists... 57%Reading package lists... 64%Reading package lists... 68%Reading package lists... 68%Reading package lists... 70%Reading package lists... 70%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 90%Reading package lists... 90%Reading package lists... 92%Reading package lists... 92%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+[32m|[0m Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 15%Reading package lists... 31%Reading package lists... 45%Reading package lists... 53%Reading package lists... 56%Reading package lists... 56%Reading package lists... 57%Reading package lists... 57%Reading package lists... 64%Reading package lists... 68%Reading package lists... 68%Reading package lists... 70%Reading package lists... 70%Reading package lists... 77%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 90%Reading package lists... 90%Reading package lists... 92%Reading package lists... 92%Reading package lists... 96%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+[34m|[0m Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 80%Building dependency tree       
+[33m|[0m Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 81%Building dependency tree       
+[34m|[0m Reading state information... 0%Reading state information... 0%Reading state information... Done
+[33m|[0m Reading state information... 0%Reading state information... 0%Reading state information... Done
+[34m|[0m cppcheck is already the newest version (1.82-1).
+[33m|[0m cppcheck is already the newest version (1.82-1).
+[35m|[0m Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 74%Building dependency tree       
+[35m|[0m Reading state information... 0%Reading state information... 0%Reading state information... Done
+[35m|[0m cppcheck is already the newest version (1.82-1).
+[32m|[0m Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 58%Building dependency tree... 85%Building dependency tree       
+[32m|[0m Reading state information... 0%Reading state information... 0%Reading state information... Done
+[32m|[0m cppcheck is already the newest version (1.82-1).
+[33m|[0m The following packages were automatically installed and are no longer required:
+[33m|[0m   curl gettext-base libcroco3
+[33m|[0m Use 'sudo apt autoremove' to remove them.
+[34m|[0m The following packages were automatically installed and are no longer required:
+[34m|[0m   curl gettext-base libcroco3
+[34m|[0m Use 'sudo apt autoremove' to remove them.
+[35m|[0m The following packages were automatically installed and are no longer required:
+[35m|[0m   curl gettext-base libcroco3
+[35m|[0m Use 'sudo apt autoremove' to remove them.
+[32m|[0m The following packages were automatically installed and are no longer required:
+[32m|[0m   curl gettext-base libcroco3
+[32m|[0m Use 'sudo apt autoremove' to remove them.
+[35m|[0m 0 upgraded, 0 newly installed, 0 to remove and 9 not upgraded.
+[32m|[0m 0 upgraded, 0 newly installed, 0 to remove and 9 not upgraded.
+[34m|[0m 0 upgraded, 0 newly installed, 0 to remove and 9 not upgraded.
+[33m|[0m 0 upgraded, 0 newly installed, 0 to remove and 9 not upgraded.
+[33m[Static Analysis/Run cppcheck-1] [0m  ✅  Success - Install cppcheck
+[35m[Static Analysis/Run cppcheck-3] [0m  ✅  Success - Install cppcheck
+[32m[Static Analysis/Run cppcheck-4] [0m  ✅  Success - Install cppcheck
+[34m[Static Analysis/Run cppcheck-2] [0m  ✅  Success - Install cppcheck
+[35m[Static Analysis/Run cppcheck-3] [0m⭐  Run Checkout code
+[35m[Static Analysis/Run cppcheck-3] [0m  ✅  Success - Checkout code
+[34m[Static Analysis/Run cppcheck-2] [0m⭐  Run Checkout code
+[34m[Static Analysis/Run cppcheck-2] [0m  ✅  Success - Checkout code
+[33m[Static Analysis/Run cppcheck-1] [0m⭐  Run Checkout code
+[33m[Static Analysis/Run cppcheck-1] [0m  ✅  Success - Checkout code
+[32m[Static Analysis/Run cppcheck-4] [0m⭐  Run Checkout code
+[32m[Static Analysis/Run cppcheck-4] [0m  ✅  Success - Checkout code
+[34m[Static Analysis/Run cppcheck-2] [0m⭐  Run test command
+[35m[Static Analysis/Run cppcheck-3] [0m⭐  Run test command
+[33m[Static Analysis/Run cppcheck-1] [0m⭐  Run test command
+[32m[Static Analysis/Run cppcheck-4] [0m⭐  Run test command
+[34m[Static Analysis/Run cppcheck-2] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/2] user=
+[35m[Static Analysis/Run cppcheck-3] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/2] user=
+[33m[Static Analysis/Run cppcheck-1] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/2] user=
+[32m[Static Analysis/Run cppcheck-4] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/2] user=
+[34m|[0m CODE_OF_CONDUCT.md  build-cfs-deprecated.txt  output.log
+[34m|[0m CONTRIBUTING.md     build-cfs.txt	      par
+[34m|[0m LICENSE		    build-documentation.txt   psp
+[34m|[0m README.md	    cfe			      static-analysis.txt
+[34m|[0m Run_action	    changelog.txt	      tee
+[34m|[0m Run_action_save     codeql-build.txt	      test.txt
+[34m|[0m SECURITY.md	    log			      tools
+[34m|[0m apps		    osal		      workflow
+[34m[Static Analysis/Run cppcheck-2] [0m  ✅  Success - test command
+[32m|[0m CODE_OF_CONDUCT.md  build-cfs-deprecated.txt  output.log
+[32m|[0m CONTRIBUTING.md     build-cfs.txt	      par
+[32m|[0m LICENSE		    build-documentation.txt   psp
+[32m|[0m README.md	    cfe			      static-analysis.txt
+[32m|[0m Run_action	    changelog.txt	      tee
+[32m|[0m Run_action_save     codeql-build.txt	      test.txt
+[32m|[0m SECURITY.md	    log			      tools
+[32m|[0m apps		    osal		      workflow
+[32m[Static Analysis/Run cppcheck-4] [0m  ✅  Success - test command
+[33m|[0m CODE_OF_CONDUCT.md  build-cfs-deprecated.txt  output.log
+[33m|[0m CONTRIBUTING.md     build-cfs.txt	      par
+[33m|[0m LICENSE		    build-documentation.txt   psp
+[33m|[0m README.md	    cfe			      static-analysis.txt
+[33m|[0m Run_action	    changelog.txt	      tee
+[33m|[0m Run_action_save     codeql-build.txt	      test.txt
+[33m|[0m SECURITY.md	    log			      tools
+[33m|[0m apps		    osal		      workflow
+[33m[Static Analysis/Run cppcheck-1] [0m  ✅  Success - test command
+[34m[Static Analysis/Run cppcheck-2] [0m⭐  Run cfe strict cppcheck
+[35m|[0m CODE_OF_CONDUCT.md  build-cfs-deprecated.txt  output.log
+[35m|[0m CONTRIBUTING.md     build-cfs.txt	      par
+[35m|[0m LICENSE		    build-documentation.txt   psp
+[35m|[0m README.md	    cfe			      static-analysis.txt
+[35m|[0m Run_action	    changelog.txt	      tee
+[35m|[0m Run_action_save     codeql-build.txt	      test.txt
+[35m|[0m SECURITY.md	    log			      tools
+[35m|[0m apps		    osal		      workflow
+[35m[Static Analysis/Run cppcheck-3] [0m  ✅  Success - test command
+[34m[Static Analysis/Run cppcheck-2] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/4] user=
+[32m[Static Analysis/Run cppcheck-4] [0m⭐  Run psp strict cppcheck
+[33m[Static Analysis/Run cppcheck-1] [0m⭐  Run Run bundle cppcheck
+[35m[Static Analysis/Run cppcheck-3] [0m⭐  Run osal strict cppcheck
+[32m[Static Analysis/Run cppcheck-4] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/6] user=
+[33m[Static Analysis/Run cppcheck-1] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/3] user=
+[35m[Static Analysis/Run cppcheck-3] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/5] user=
+[34m|[0m Checking modules/es/fsw/src/cfe_es_api.c ...
+[35m|[0m Checking src/bsp/generic-linux/src/bsp_console.c ...
+[35m|[0m 1/101 files checked 0% done
+[35m|[0m Checking src/bsp/generic-linux/src/bsp_start.c ...
+[32m|[0m Checking fsw/mcp750-vxworks/src/bsp-integration/cfeSupport.c ...
+[35m|[0m 2/101 files checked 1% done
+[32m|[0m 1/34 files checked 2% done
+[32m|[0m Checking fsw/mcp750-vxworks/src/cfe_psp_exception.c ...
+[32m|[0m 2/34 files checked 5% done
+[32m|[0m Checking fsw/mcp750-vxworks/src/cfe_psp_memory.c ...
+[35m|[0m Checking src/bsp/generic-vxworks/src/bsp_console.c ...
+[35m|[0m 3/101 files checked 2% done
+[35m|[0m Checking src/bsp/generic-vxworks/src/bsp_start.c ...
+[35m|[0m 4/101 files checked 3% done
+[35m|[0m Checking src/bsp/pc-rtems/src/bsp_console.c ...
+[35m|[0m Checking src/bsp/pc-rtems/src/bsp_console.c: _RTEMS_5_...
+[35m|[0m 5/101 files checked 4% done
+[35m|[0m Checking src/bsp/pc-rtems/src/bsp_start.c ...
+[32m|[0m 3/34 files checked 8% done
+[32m|[0m Checking fsw/mcp750-vxworks/src/cfe_psp_ssr.c ...
+[32m|[0m 4/34 files checked 11% done
+[32m|[0m Checking fsw/mcp750-vxworks/src/cfe_psp_start.c ...
+[32m|[0m 5/34 files checked 14% done
+[32m|[0m Checking fsw/mcp750-vxworks/src/cfe_psp_support.c ...
+[32m|[0m 6/34 files checked 17% done
+[32m|[0m Checking fsw/mcp750-vxworks/src/cfe_psp_watchdog.c ...
+[32m|[0m 7/34 files checked 20% done
+[32m|[0m Checking fsw/modules/eeprom_direct/cfe_psp_eeprom_direct.c ...
+[32m|[0m Checking fsw/modules/eeprom_direct/cfe_psp_eeprom_direct.c: SOFTWARE_LITTLE_BIT_ORDER...
+[32m|[0m 8/34 files checked 23% done
+[32m|[0m Checking fsw/modules/eeprom_mmap_file/cfe_psp_eeprom_mmap_file.c ...
+[35m|[0m Checking src/bsp/pc-rtems/src/bsp_start.c: _RTEMS_5_...
+[32m|[0m 9/34 files checked 26% done
+[32m|[0m Checking fsw/modules/eeprom_notimpl/cfe_psp_eeprom_notimpl.c ...
+[32m|[0m 10/34 files checked 29% done
+[32m|[0m Checking fsw/modules/port_direct/cfe_psp_port_direct.c ...
+[32m|[0m 11/34 files checked 32% done
+[32m|[0m Checking fsw/modules/port_notimpl/cfe_psp_port_notimpl.c ...
+[32m|[0m 12/34 files checked 35% done
+[32m|[0m Checking fsw/modules/ram_direct/cfe_psp_ram_direct.c ...
+[32m|[0m 13/34 files checked 38% done
+[32m|[0m Checking fsw/modules/ram_notimpl/cfe_psp_ram_notimpl.c ...
+[32m|[0m 14/34 files checked 41% done
+[32m|[0m Checking fsw/modules/soft_timebase/cfe_psp_soft_timebase.c ...
+[32m|[0m 15/34 files checked 44% done
+[32m|[0m Checking fsw/modules/timebase_posix_clock/cfe_psp_timebase_posix_clock.c ...
+[32m|[0m 16/34 files checked 47% done
+[32m|[0m Checking fsw/modules/timebase_vxworks/cfe_psp_timebase_vxworks.c ...
+[35m|[0m 6/101 files checked 5% done
+[35m|[0m Checking src/bsp/shared/src/bsp_default_app_run.c ...
+[35m|[0m 7/101 files checked 6% done
+[35m|[0m Checking src/bsp/shared/src/bsp_default_app_startup.c ...
+[35m|[0m 8/101 files checked 7% done
+[35m|[0m Checking src/bsp/shared/src/bsp_default_symtab.c ...
+[35m|[0m 9/101 files checked 8% done
+[35m|[0m Checking src/bsp/shared/src/osapi-bsp.c ...
+[35m|[0m 10/101 files checked 9% done
+[35m|[0m Checking src/os/portable/os-impl-bsd-select.c ...
+[32m|[0m 17/34 files checked 50% done
+[32m|[0m Checking fsw/pc-linux/src/cfe_psp_exception.c ...
+[32m|[0m 18/34 files checked 52% done
+[32m|[0m Checking fsw/pc-linux/src/cfe_psp_memory.c ...
+[35m|[0m 11/101 files checked 10% done
+[35m|[0m Checking src/os/portable/os-impl-bsd-sockets.c ...
+[32m|[0m 19/34 files checked 55% done
+[32m|[0m Checking fsw/pc-linux/src/cfe_psp_ssr.c ...
+[32m|[0m 20/34 files checked 58% done
+[32m|[0m Checking fsw/pc-linux/src/cfe_psp_start.c ...
+[35m|[0m Checking src/os/portable/os-impl-bsd-sockets.c: OS_NETWORK_SUPPORTS_IPV6...
+[32m|[0m 21/34 files checked 61% done
+[32m|[0m Checking fsw/pc-linux/src/cfe_psp_support.c ...
+[32m|[0m 22/34 files checked 64% done
+[32m|[0m Checking fsw/pc-linux/src/cfe_psp_watchdog.c ...
+[32m|[0m 23/34 files checked 67% done
+[32m|[0m Checking fsw/pc-rtems/src/cfe_psp_exception.c ...
+[32m|[0m 24/34 files checked 70% done
+[32m|[0m Checking fsw/pc-rtems/src/cfe_psp_memory.c ...
+[32m|[0m 25/34 files checked 73% done
+[32m|[0m Checking fsw/pc-rtems/src/cfe_psp_ssr.c ...
+[32m|[0m 26/34 files checked 76% done
+[32m|[0m Checking fsw/pc-rtems/src/cfe_psp_start.c ...
+[35m|[0m 12/101 files checked 11% done
+[35m|[0m Checking src/os/portable/os-impl-console-bsp.c ...
+[32m|[0m 27/34 files checked 79% done
+[32m|[0m Checking fsw/pc-rtems/src/cfe_psp_support.c ...
+[35m|[0m 13/101 files checked 12% done
+[35m|[0m Checking src/os/portable/os-impl-no-loader.c ...
+[35m|[0m 14/101 files checked 13% done
+[35m|[0m Checking src/os/portable/os-impl-no-network.c ...
+[35m|[0m 15/101 files checked 14% done
+[35m|[0m Checking src/os/portable/os-impl-no-shell.c ...
+[35m|[0m 16/101 files checked 15% done
+[35m|[0m Checking src/os/portable/os-impl-no-sockets.c ...
+[32m|[0m 28/34 files checked 82% done
+[32m|[0m Checking fsw/pc-rtems/src/cfe_psp_watchdog.c ...
+[32m|[0m 29/34 files checked 85% done
+[32m|[0m Checking fsw/shared/src/cfe_psp_exceptionstorage.c ...
+[35m|[0m 17/101 files checked 16% done
+[35m|[0m Checking src/os/portable/os-impl-no-symtab.c ...
+[35m|[0m 18/101 files checked 17% done
+[35m|[0m Checking src/os/portable/os-impl-posix-dirs.c ...
+[35m|[0m 19/101 files checked 18% done
+[32m|[0m 30/34 files checked 88% done
+[35m|[0m Checking src/os/portable/os-impl-posix-dl-loader.c ...
+[32m|[0m Checking fsw/shared/src/cfe_psp_memrange.c ...
+[35m|[0m 20/101 files checked 19% done
+[35m|[0m Checking src/os/portable/os-impl-posix-dl-symtab.c ...
+[35m|[0m Checking src/os/portable/os-impl-posix-dl-symtab.c: RTLD_DEFAULT...
+[35m|[0m 21/101 files checked 20% done
+[35m|[0m Checking src/os/portable/os-impl-posix-files.c ...
+[32m|[0m 31/34 files checked 91% done
+[32m|[0m Checking fsw/shared/src/cfe_psp_memutils.c ...
+[32m|[0m 32/34 files checked 94% done
+[32m|[0m Checking fsw/shared/src/cfe_psp_module.c ...
+[34m|[0m 1/50 files checked 2% done
+[34m|[0m Checking modules/es/fsw/src/cfe_es_apps.c ...
+[32m|[0m Checking fsw/shared/src/cfe_psp_module.c: OS_OBJECT_TYPE_USER...
+[32m|[0m 33/34 files checked 97% done
+[32m|[0m Checking fsw/shared/src/cfe_psp_version.c ...
+[32m|[0m 34/34 files checked 100% done
+[32m[Static Analysis/Run cppcheck-4] [0m  ✅  Success - psp strict cppcheck
+[35m|[0m 22/101 files checked 21% done
+[35m|[0m Checking src/os/portable/os-impl-posix-gettime.c ...
+[35m|[0m 23/101 files checked 22% done
+[35m|[0m Checking src/os/portable/os-impl-posix-io.c ...
+[35m|[0m 24/101 files checked 23% done
+[35m|[0m Checking src/os/portable/os-impl-posix-network.c ...
+[35m|[0m 25/101 files checked 24% done
+[35m|[0m Checking src/os/posix/src/os-impl-binsem.c ...
+[32m[Static Analysis/Run cppcheck-4] [0m⭐  Run Archive Static Analysis Artifacts
+[36mINFO[0m[0048]   ☁  git clone 'https://github.com/actions/upload-artifact' # ref=v2 
+[35m|[0m 26/101 files checked 25% done
+[35m|[0m Checking src/os/posix/src/os-impl-common.c ...
+[35m|[0m 27/101 files checked 26% done
+[35m|[0m Checking src/os/posix/src/os-impl-console.c ...
+[35m|[0m 28/101 files checked 27% done
+[35m|[0m Checking src/os/posix/src/os-impl-countsem.c ...
+[35m|[0m 29/101 files checked 28% done
+[35m|[0m Checking src/os/posix/src/os-impl-dirs.c ...
+[35m|[0m 30/101 files checked 29% done
+[35m|[0m Checking src/os/posix/src/os-impl-errors.c ...
+[35m|[0m 31/101 files checked 30% done
+[35m|[0m Checking src/os/posix/src/os-impl-files.c ...
+[35m|[0m 32/101 files checked 31% done
+[35m|[0m Checking src/os/posix/src/os-impl-filesys.c ...
+[35m|[0m 33/101 files checked 32% done
+[35m|[0m Checking src/os/posix/src/os-impl-heap.c ...
+[35m|[0m 34/101 files checked 33% done
+[35m|[0m Checking src/os/posix/src/os-impl-idmap.c ...
+[35m|[0m 35/101 files checked 34% done
+[35m|[0m Checking src/os/posix/src/os-impl-loader.c ...
+[35m|[0m 36/101 files checked 35% done
+[35m|[0m Checking src/os/posix/src/os-impl-mutex.c ...
+[35m|[0m 37/101 files checked 36% done
+[35m|[0m Checking src/os/posix/src/os-impl-no-module.c ...
+[35m|[0m 38/101 files checked 37% done
+[35m|[0m Checking src/os/posix/src/os-impl-queues.c ...
+[35m|[0m Checking src/os/posix/src/os-impl-queues.c: OSAL_CONFIG_DEBUG_PERMISSIVE_MODE...
+[35m|[0m 39/101 files checked 38% done
+[35m|[0m Checking src/os/posix/src/os-impl-shell.c ...
+[35m|[0m 40/101 files checked 39% done
+[35m|[0m Checking src/os/posix/src/os-impl-tasks.c ...
+[34m|[0m 2/50 files checked 4% done
+[34m|[0m Checking modules/es/fsw/src/cfe_es_backgroundtask.c ...
+[35m|[0m Checking src/os/posix/src/os-impl-tasks.c: OSAL_CONFIG_DEBUG_PERMISSIVE_MODE...
+[32m[Static Analysis/Run cppcheck-4] [0m  🐳  docker cp src=/root/.cache/act/actions-upload-artifact@v2/ dst=/var/run/act/actions/actions-upload-artifact@v2/
+[32m[Static Analysis/Run cppcheck-4] [0m  🐳  docker exec cmd=[mkdir -p /var/run/act/actions/actions-upload-artifact@v2/] user=
+[34m|[0m 3/50 files checked 6% done
+[34m|[0m Checking modules/es/fsw/src/cfe_es_cds.c ...
+[35m|[0m 41/101 files checked 40% done
+[35m|[0m Checking src/os/posix/src/os-impl-timebase.c ...
+[35m|[0m Checking src/os/posix/src/os-impl-timebase.c: _POSIX_MONOTONIC_CLOCK...
+[34m|[0m 4/50 files checked 8% done
+[34m|[0m Checking modules/es/fsw/src/cfe_es_cds_mempool.c ...
+[35m|[0m 42/101 files checked 41% done
+[35m|[0m Checking src/os/rtems/src/os-impl-binsem.c ...
+[35m|[0m 43/101 files checked 42% done
+[35m|[0m Checking src/os/rtems/src/os-impl-common.c ...
+[35m|[0m 44/101 files checked 43% done
+[35m|[0m Checking src/os/rtems/src/os-impl-console.c ...
+[35m|[0m 45/101 files checked 44% done
+[35m|[0m Checking src/os/rtems/src/os-impl-countsem.c ...
+[35m|[0m 46/101 files checked 45% done
+[35m|[0m Checking src/os/rtems/src/os-impl-dirs.c ...
+[35m|[0m 47/101 files checked 46% done
+[35m|[0m Checking src/os/rtems/src/os-impl-errors.c ...
+[35m|[0m 48/101 files checked 47% done
+[35m|[0m Checking src/os/rtems/src/os-impl-files.c ...
+[35m|[0m 49/101 files checked 48% done
+[35m|[0m Checking src/os/rtems/src/os-impl-filesys.c ...
+[35m|[0m 50/101 files checked 49% done
+[35m|[0m Checking src/os/rtems/src/os-impl-heap.c ...
+[35m|[0m 51/101 files checked 50% done
+[35m|[0m Checking src/os/rtems/src/os-impl-idmap.c ...
+[34m|[0m 5/50 files checked 10% done
+[34m|[0m Checking modules/es/fsw/src/cfe_es_erlog.c ...
+[35m|[0m 52/101 files checked 51% done
+[35m|[0m Checking src/os/rtems/src/os-impl-loader.c ...
+[35m|[0m 53/101 files checked 52% done
+[35m|[0m Checking src/os/rtems/src/os-impl-mutex.c ...
+[35m|[0m 54/101 files checked 53% done
+[35m|[0m Checking src/os/rtems/src/os-impl-network.c ...
+[35m|[0m 55/101 files checked 54% done
+[35m|[0m Checking src/os/rtems/src/os-impl-no-module.c ...
+[35m|[0m 56/101 files checked 55% done
+[35m|[0m Checking src/os/rtems/src/os-impl-queues.c ...
+[35m|[0m 57/101 files checked 56% done
+[35m|[0m Checking src/os/rtems/src/os-impl-tasks.c ...
+[34m|[0m 6/50 files checked 12% done
+[34m|[0m Checking modules/es/fsw/src/cfe_es_generic_pool.c ...
+[35m|[0m 58/101 files checked 57% done
+[35m|[0m Checking src/os/rtems/src/os-impl-timebase.c ...
+[35m|[0m Checking src/os/rtems/src/os-impl-timebase.c: _POSIX_MONOTONIC_CLOCK...
+[35m|[0m 59/101 files checked 58% done
+[35m|[0m Checking src/os/shared/src/osapi-binsem.c ...
+[35m|[0m Checking src/os/shared/src/osapi-binsem.c: OS_MAX_BIN_SEMAPHORES...
+[35m|[0m 60/101 files checked 59% done
+[35m|[0m Checking src/os/shared/src/osapi-clock.c ...
+[35m|[0m 61/101 files checked 60% done
+[35m|[0m Checking src/os/shared/src/osapi-common.c ...
+[35m|[0m Checking src/os/shared/src/osapi-common.c: OSAL_CONFIG_DEBUG_PRINTF...
+[35m|[0m 62/101 files checked 61% done
+[35m|[0m Checking src/os/shared/src/osapi-countsem.c ...
+[35m|[0m Checking src/os/shared/src/osapi-countsem.c: OS_MAX_COUNT_SEMAPHORES...
+[35m|[0m 63/101 files checked 62% done
+[35m|[0m Checking src/os/shared/src/osapi-debug.c ...
+[35m|[0m 64/101 files checked 63% done
+[35m|[0m Checking src/os/shared/src/osapi-dir.c ...
+[35m|[0m Checking src/os/shared/src/osapi-dir.c: OS_MAX_NUM_OPEN_DIRS...
+[35m|[0m 65/101 files checked 64% done
+[35m|[0m Checking src/os/shared/src/osapi-errors.c ...
+[32m[Static Analysis/Run cppcheck-4] [0m  🐳  docker exec cmd=[node /var/run/act/actions/actions-upload-artifact@v2/dist/index.js] user=
+[34m|[0m 7/50 files checked 14% done
+[35m|[0m 66/101 files checked 65% done
+[35m|[0m Checking src/os/shared/src/osapi-file.c ...
+[35m|[0m Checking src/os/shared/src/osapi-file.c: OS_MAX_NUM_OPEN_FILES...
+[34m|[0m Checking modules/es/fsw/src/cfe_es_mempool.c ...
+[35m|[0m 67/101 files checked 66% done
+[35m|[0m Checking src/os/shared/src/osapi-filesys.c ...
+[35m|[0m 68/101 files checked 67% done
+[35m|[0m Checking src/os/shared/src/osapi-heap.c ...
+[35m|[0m 69/101 files checked 68% done
+[35m|[0m Checking src/os/shared/src/osapi-idmap.c ...
+[34m|[0m 8/50 files checked 16% done
+[34m|[0m Checking modules/es/fsw/src/cfe_es_objtab.c ...
+[35m|[0m 70/101 files checked 69% done
+[35m|[0m Checking src/os/shared/src/osapi-module.c ...
+[35m|[0m Checking src/os/shared/src/osapi-module.c: OSAL_CONFIG_INCLUDE_STATIC_LOADER;OS_STATIC_SYMTABLE_SOURCE...
+[35m|[0m Checking src/os/shared/src/osapi-module.c: OS_MAX_MODULES...
+[35m|[0m 71/101 files checked 70% done
+[35m|[0m Checking src/os/shared/src/osapi-mutex.c ...
+[35m|[0m Checking src/os/shared/src/osapi-mutex.c: OS_MAX_MUTEXES...
+[35m|[0m 72/101 files checked 71% done
+[35m|[0m Checking src/os/shared/src/osapi-network.c ...
+[35m|[0m 73/101 files checked 72% done
+[35m|[0m Checking src/os/shared/src/osapi-printf.c ...
+[35m|[0m Checking src/os/shared/src/osapi-printf.c: OSAL_CONFIG_CONSOLE_ASYNC...
+[34m|[0m 9/50 files checked 18% done
+[34m|[0m Checking modules/es/fsw/src/cfe_es_perf.c ...
+[35m|[0m 74/101 files checked 73% done
+[35m|[0m Checking src/os/shared/src/osapi-queue.c ...
+[35m|[0m Checking src/os/shared/src/osapi-queue.c: OS_MAX_QUEUES...
+[35m|[0m 75/101 files checked 74% done
+[35m|[0m Checking src/os/shared/src/osapi-select.c ...
+[35m|[0m 76/101 files checked 75% done
+[35m|[0m Checking src/os/shared/src/osapi-shell.c ...
+[35m|[0m 77/101 files checked 76% done
+[35m|[0m Checking src/os/shared/src/osapi-sockets.c ...
+[35m|[0m 78/101 files checked 77% done
+[35m|[0m Checking src/os/shared/src/osapi-task.c ...
+[35m|[0m Checking src/os/shared/src/osapi-task.c: OS_MAX_TASKS...
+[35m|[0m 79/101 files checked 78% done
+[35m|[0m Checking src/os/shared/src/osapi-time.c ...
+[35m|[0m Checking src/os/shared/src/osapi-time.c: OS_MAX_TIMERS...
+[35m|[0m 80/101 files checked 79% done
+[35m|[0m Checking src/os/shared/src/osapi-timebase.c ...
+[35m|[0m Checking src/os/shared/src/osapi-timebase.c: OS_MAX_TIMEBASES...
+[35m|[0m 81/101 files checked 80% done
+[35m|[0m Checking src/os/shared/src/osapi-version.c ...
+[35m|[0m 82/101 files checked 81% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-binsem.c ...
+[34m|[0m 10/50 files checked 20% done
+[34m|[0m Checking modules/es/fsw/src/cfe_es_resource.c ...
+[35m|[0m 83/101 files checked 82% done
+[32m|[0m OCI runtime exec failed: exec failed: container_linux.go:367: starting container process caused: exec: "node": executable file not found in $PATH: unknown
+[35m|[0m Checking src/os/vxworks/src/os-impl-common.c ...
+[32m[Static Analysis/Run cppcheck-4] [0m  ❌  Failure - Archive Static Analysis Artifacts
+[35m|[0m 84/101 files checked 83% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-console.c ...
+[35m|[0m 85/101 files checked 84% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-countsem.c ...
+[35m|[0m 86/101 files checked 85% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-dirs-globals.c ...
+[35m|[0m 87/101 files checked 86% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-errors.c ...
+[35m|[0m 88/101 files checked 87% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-files.c ...
+[35m|[0m 89/101 files checked 88% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-filesys.c ...
+[35m|[0m Checking src/os/vxworks/src/os-impl-filesys.c: USE_VXWORKS_ATA_DRIVER...
+[34m|[0m 11/50 files checked 22% done
+[34m|[0m Checking modules/es/fsw/src/cfe_es_start.c ...
+[35m|[0m 90/101 files checked 89% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-heap.c ...
+[35m|[0m 91/101 files checked 90% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-idmap.c ...
+[35m|[0m 92/101 files checked 91% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-loader.c ...
+[35m|[0m 93/101 files checked 92% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-mutex.c ...
+[35m|[0m 94/101 files checked 93% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-network.c ...
+[35m|[0m 95/101 files checked 94% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-no-module.c ...
+[35m|[0m 96/101 files checked 95% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-queues.c ...
+[35m|[0m 97/101 files checked 96% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-shell.c ...
+[35m|[0m 98/101 files checked 97% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-symtab.c ...
+[35m|[0m 99/101 files checked 98% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-tasks.c ...
+[34m|[0m 12/50 files checked 24% done
+[34m|[0m Checking modules/es/fsw/src/cfe_es_syslog.c ...
+[35m|[0m Checking src/os/vxworks/src/os-impl-tasks.c: STACK_ROUND_DOWN...
+[35m|[0m Checking src/os/vxworks/src/os-impl-tasks.c: STACK_ROUND_UP...
+[35m|[0m Checking src/os/vxworks/src/os-impl-tasks.c: _STACK_ALIGN_SIZE...
+[35m|[0m Checking src/os/vxworks/src/os-impl-tasks.c: _STACK_DIR...
+[35m|[0m 100/101 files checked 99% done
+[35m|[0m Checking src/os/vxworks/src/os-impl-timebase.c ...
+[35m|[0m Checking src/os/vxworks/src/os-impl-timebase.c: _POSIX_MONOTONIC_CLOCK...
+[34m|[0m 13/50 files checked 26% done
+[34m|[0m Checking modules/es/fsw/src/cfe_es_task.c ...
+[35m|[0m 101/101 files checked 100% done
+[35m[Static Analysis/Run cppcheck-3] [0m  ✅  Success - osal strict cppcheck
+[34m|[0m 14/50 files checked 28% done
+[34m|[0m Checking modules/evs/fsw/src/cfe_evs.c ...
+[34m|[0m 15/50 files checked 30% done
+[34m|[0m Checking modules/evs/fsw/src/cfe_evs_log.c ...
+[34m|[0m 16/50 files checked 32% done
+[34m|[0m Checking modules/evs/fsw/src/cfe_evs_task.c ...
+[34m|[0m 17/50 files checked 34% done
+[34m|[0m Checking modules/evs/fsw/src/cfe_evs_utils.c ...
+[34m|[0m 18/50 files checked 36% done
+[34m|[0m Checking modules/fs/fsw/src/cfe_fs_api.c ...
+[35m[Static Analysis/Run cppcheck-3] [0m⭐  Run Archive Static Analysis Artifacts
+[36mINFO[0m[0053]   ☁  git clone 'https://github.com/actions/upload-artifact' # ref=v2 
+[35m[Static Analysis/Run cppcheck-3] [0m  🐳  docker cp src=/root/.cache/act/actions-upload-artifact@v2/ dst=/var/run/act/actions/actions-upload-artifact@v2/
+[35m[Static Analysis/Run cppcheck-3] [0m  🐳  docker exec cmd=[mkdir -p /var/run/act/actions/actions-upload-artifact@v2/] user=
+[34m|[0m 19/50 files checked 38% done
+[34m|[0m Checking modules/fs/fsw/src/cfe_fs_priv.c ...
+[34m|[0m 20/50 files checked 40% done
+[34m|[0m Checking modules/msg/fsw/src/cfe_msg_ccsdsext.c ...
+[34m|[0m 21/50 files checked 42% done
+[34m|[0m Checking modules/msg/fsw/src/cfe_msg_ccsdspri.c ...
+[34m|[0m 22/50 files checked 44% done
+[34m|[0m Checking modules/msg/fsw/src/cfe_msg_init.c ...
+[34m|[0m 23/50 files checked 46% done
+[34m|[0m Checking modules/msg/fsw/src/cfe_msg_initdefaulthdr_pri.c ...
+[34m|[0m 24/50 files checked 48% done
+[34m|[0m Checking modules/msg/fsw/src/cfe_msg_initdefaulthdr_priext.c ...
+[34m|[0m 25/50 files checked 50% done
+[34m|[0m Checking modules/msg/fsw/src/cfe_msg_msgid_shared.c ...
+[34m|[0m 26/50 files checked 52% done
+[34m|[0m Checking modules/msg/fsw/src/cfe_msg_msgid_v1.c ...
+[34m|[0m 27/50 files checked 54% done
+[34m|[0m Checking modules/msg/fsw/src/cfe_msg_msgid_v2.c ...
+[34m|[0m 28/50 files checked 56% done
+[34m|[0m Checking modules/msg/fsw/src/cfe_msg_sechdr_checksum.c ...
+[34m|[0m 29/50 files checked 58% done
+[34m|[0m Checking modules/msg/fsw/src/cfe_msg_sechdr_fc.c ...
+[34m|[0m 30/50 files checked 60% done
+[34m|[0m Checking modules/msg/fsw/src/cfe_msg_sechdr_time.c ...
+[34m|[0m 31/50 files checked 62% done
+[34m|[0m Checking modules/resourceid/fsw/src/cfe_resourceid_api.c ...
+[34m|[0m 32/50 files checked 64% done
+[34m|[0m Checking modules/sb/fsw/src/cfe_sb_api.c ...
+[34m|[0m 33/50 files checked 66% done
+[34m|[0m Checking modules/sb/fsw/src/cfe_sb_buf.c ...
+[34m|[0m 34/50 files checked 68% done
+[34m|[0m Checking modules/sb/fsw/src/cfe_sb_init.c ...
+[34m|[0m 35/50 files checked 70% done
+[34m|[0m Checking modules/sb/fsw/src/cfe_sb_msg_id_util.c ...
+[34m|[0m 36/50 files checked 72% done
+[34m|[0m Checking modules/sb/fsw/src/cfe_sb_priv.c ...
+[34m|[0m 37/50 files checked 74% done
+[34m|[0m Checking modules/sb/fsw/src/cfe_sb_task.c ...
+[34m|[0m 38/50 files checked 76% done
+[34m|[0m Checking modules/sb/fsw/src/cfe_sb_util.c ...
+[34m|[0m 39/50 files checked 78% done
+[34m|[0m Checking modules/sbr/fsw/src/cfe_sbr_map_direct.c ...
+[34m|[0m 40/50 files checked 80% done
+[34m|[0m Checking modules/sbr/fsw/src/cfe_sbr_map_hash.c ...
+[34m|[0m 41/50 files checked 82% done
+[34m|[0m Checking modules/sbr/fsw/src/cfe_sbr_route_unsorted.c ...
+[35m[Static Analysis/Run cppcheck-3] [0m  🐳  docker exec cmd=[node /var/run/act/actions/actions-upload-artifact@v2/dist/index.js] user=
+[34m|[0m 42/50 files checked 84% done
+[34m|[0m Checking modules/tbl/fsw/src/cfe_tbl_api.c ...
+[34m|[0m 43/50 files checked 86% done
+[34m|[0m Checking modules/tbl/fsw/src/cfe_tbl_internal.c ...
+[34m|[0m 44/50 files checked 88% done
+[34m|[0m Checking modules/tbl/fsw/src/cfe_tbl_task.c ...
+[34m|[0m 45/50 files checked 90% done
+[35m|[0m OCI runtime exec failed: exec failed: container_linux.go:367: starting container process caused: exec: "node": executable file not found in $PATH: unknown
+[35m[Static Analysis/Run cppcheck-3] [0m  ❌  Failure - Archive Static Analysis Artifacts
+[34m|[0m Checking modules/tbl/fsw/src/cfe_tbl_task_cmds.c ...
+[34m|[0m 46/50 files checked 92% done
+[34m|[0m Checking modules/time/fsw/src/cfe_time_api.c ...
+[34m|[0m 47/50 files checked 94% done
+[34m|[0m Checking modules/time/fsw/src/cfe_time_task.c ...
+[34m|[0m 48/50 files checked 96% done
+[34m|[0m Checking modules/time/fsw/src/cfe_time_tone.c ...
+[34m|[0m Checking modules/time/fsw/src/cfe_time_tone.c: CFE_PLATFORM_TIME_CFG_BIGENDIAN...
+[34m|[0m 49/50 files checked 98% done
+[34m|[0m Checking modules/time/fsw/src/cfe_time_utils.c ...
+[34m|[0m 50/50 files checked 100% done
+[34m[Static Analysis/Run cppcheck-2] [0m  ✅  Success - cfe strict cppcheck
+[34m[Static Analysis/Run cppcheck-2] [0m⭐  Run Archive Static Analysis Artifacts
+[36mINFO[0m[0059]   ☁  git clone 'https://github.com/actions/upload-artifact' # ref=v2 
+[34m[Static Analysis/Run cppcheck-2] [0m  🐳  docker cp src=/root/.cache/act/actions-upload-artifact@v2/ dst=/var/run/act/actions/actions-upload-artifact@v2/
+[34m[Static Analysis/Run cppcheck-2] [0m  🐳  docker exec cmd=[mkdir -p /var/run/act/actions/actions-upload-artifact@v2/] user=
+[34m[Static Analysis/Run cppcheck-2] [0m  🐳  docker exec cmd=[node /var/run/act/actions/actions-upload-artifact@v2/dist/index.js] user=
+[34m|[0m OCI runtime exec failed: exec failed: container_linux.go:367: starting container process caused: exec: "node": executable file not found in $PATH: unknown
+[34m[Static Analysis/Run cppcheck-2] [0m  ❌  Failure - Archive Static Analysis Artifacts
+[33m[Static Analysis/Run cppcheck-1] [0m  ✅  Success - Run bundle cppcheck
+[33m[Static Analysis/Run cppcheck-1] [0m⭐  Run Archive Static Analysis Artifacts
+[36mINFO[0m[0093]   ☁  git clone 'https://github.com/actions/upload-artifact' # ref=v2 
+[33m[Static Analysis/Run cppcheck-1] [0m  🐳  docker cp src=/root/.cache/act/actions-upload-artifact@v2/ dst=/var/run/act/actions/actions-upload-artifact@v2/
+[33m[Static Analysis/Run cppcheck-1] [0m  🐳  docker exec cmd=[mkdir -p /var/run/act/actions/actions-upload-artifact@v2/] user=
+[33m[Static Analysis/Run cppcheck-1] [0m  🐳  docker exec cmd=[node /var/run/act/actions/actions-upload-artifact@v2/dist/index.js] user=
+[33m|[0m OCI runtime exec failed: exec failed: container_linux.go:367: starting container process caused: exec: "node": executable file not found in $PATH: unknown
+[33m[Static Analysis/Run cppcheck-1] [0m  ❌  Failure - Archive Static Analysis Artifacts
+Error: exit with `FAILURE`: 126
