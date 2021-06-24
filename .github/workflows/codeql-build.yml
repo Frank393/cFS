@@ -14,32 +14,45 @@ env:
 
 jobs:
   #Checks for duplicate actions. Skips push actions if there is a matching or duplicate pull-request action. 
- 
+  check-for-duplicates:
+    runs-on: ubuntu-latest
+    if: ${{ !env.ACT}}
+    # Map a step output to a job output
+    outputs:
+      should_skip: ${{ steps.skip_check.outputs.should_skip }}
+    steps:
+      - id: skip_check
+        uses: fkirc/skip-duplicate-actions@master
+        with:
+          concurrent_skipping: 'same_content'
+          skip_after_successful_duplicate: 'true'
+          do_not_skip: '["pull_request", "workflow_dispatch", "schedule"]'
 
       
   CodeQL-Security-Build:
     #Continue if check-for-duplicates found no duplicates. Always runs for pull-requests.
-    
+    needs: check-for-duplicates
+    if: ${{ env.ACT || needs.check-for-duplicates.outputs.should_skip != 'true' }}
     runs-on: ubuntu-18.04
     timeout-minutes: 15
 
     steps:
       # Checks out a copy of your repository
       - name: Checkout code
-       
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         uses: actions/checkout@v2
         with:
           repository: nasa/cFS
           submodules: true
 
       - name: Check versions
-        
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         run: |
            git log -1 --pretty=oneline
            git submodule
 
       - name: Initialize CodeQL
-        
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         uses: github/codeql-action/init@v1
         with:
           languages: c
@@ -47,44 +60,45 @@ jobs:
 
       # Setup the build system
       - name: Copy sample_defs
-        
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         run: |
           cp ./cfe/cmake/Makefile.sample Makefile
           cp -r ./cfe/cmake/sample_defs sample_defs
 
       # Setup the build system
       - name: Make Install
-        
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         run: make
 
       # Run CodeQL
       - name: Perform CodeQL Analysis
-       
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         uses: github/codeql-action/analyze@v1
 
   CodeQL-Coding-Standard-Build:
     #Continue if check-for-duplicates found no duplicates. Always runs for pull-requests.
-   
+    needs: check-for-duplicates
+    if: ${{ env.ACT || needs.check-for-duplicates.outputs.should_skip != 'true' }}
     runs-on: ubuntu-18.04
     timeout-minutes: 15
 
     steps:
       # Checks out a copy of your repository
       - name: Checkout code
-        
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         uses: actions/checkout@v2
         with:
           repository: nasa/cFS
           submodules: true
 
       - name: Check versions
-       
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         run: |
            git log -1 --pretty=oneline
            git submodule
 
       - name: Checkout codeql code      
-       
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         uses: actions/checkout@v2
         with:
           repository: github/codeql 
@@ -92,7 +106,7 @@ jobs:
           path: codeql
 
       - name: Initialize CodeQL
-        
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         uses: github/codeql-action/init@v1
         with:
           languages: c
@@ -100,17 +114,17 @@ jobs:
 
       # Setup the build system
       - name: Copy sample_defs
-        
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         run: |
           cp ./cfe/cmake/Makefile.sample Makefile
           cp -r ./cfe/cmake/sample_defs sample_defs
 
       # Setup the build system
       - name: Make Install
-       
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         run: make
 
       # Run CodeQL
       - name: Perform CodeQL Analysis
-        
+        if: ${{ env.ACT || !steps.skip-workflow.outputs.skip }}
         uses: github/codeql-action/analyze@v1

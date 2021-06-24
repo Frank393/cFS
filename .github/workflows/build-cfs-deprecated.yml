@@ -11,15 +11,27 @@ env:
 
 jobs:
   #Checks for duplicate actions. Skips push actions if there is a matching or duplicate pull-request action. 
-  
+  check-for-duplicates:
+    runs-on: ubuntu-latest
+    if: ${{ !env.ACT}}
+    # Map a step output to a job output
+    outputs:
+        should_skip: ${{ steps.skip_check.outputs.should_skip }}
+    steps:
+      - id: skip_check
+        uses: fkirc/skip-duplicate-actions@master
+        with:
+          concurrent_skipping: 'same_content'
+          skip_after_successful_duplicate: 'true'
+          do_not_skip: '["pull_request", "workflow_dispatch", "schedule"]'
           
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
 
   build-cfs:
     #Continue if check-for-duplicates found no duplicates. Always runs for pull-requests.
-    
-    
+    needs: check-for-duplicates
+    if: ${{ env.ACT || needs.check-for-duplicates.outputs.should_skip != 'true' }}
     name: Build
     runs-on: ubuntu-18.04
 
@@ -61,7 +73,7 @@ jobs:
       fail-fast: false
       matrix:
         buildtype: [debug, release]
-  
+
     # Set the type of machine to run on
     env:
       BUILDTYPE: ${{ matrix.buildtype }}
@@ -93,16 +105,7 @@ jobs:
 
       - name: Check Coverage
         run: make lcov
-        
-  jtest:
-    name: Build
-    runs-on: ubuntu-18.04
-    
-    steps:
-     - name: echo
-      
-       run : echo "It worked"
-       
+
   run-cfs:
     name: Run
     needs: build-cfs
@@ -145,6 +148,7 @@ jobs:
         working-directory: ./build/exe/cpu1/
 
       - name: Archive cFS Startup Artifacts
+        if: ${{ !env.ACT}}
         uses: actions/upload-artifact@v2
         with:
           name: cFS-startup-log-deprecated-false-${{ matrix.buildtype }}

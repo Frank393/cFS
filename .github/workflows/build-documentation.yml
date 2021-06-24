@@ -10,11 +10,24 @@ env:
 
 jobs:
   #Checks for duplicate actions. Skips push actions if there is a matching or duplicate pull-request action.
- 
+  checks-for-duplicates:
+    runs-on: ubuntu-latest
+    if: ${{ !env.ACT}}
+    # Map a step output to a job output
+    outputs:
+      should_skip: ${{ steps.skip_check.outputs.should_skip }}
+    steps:
+      - id: skip_check
+        uses: fkirc/skip-duplicate-actions@master
+        with:
+          concurrent_skipping: 'same_content'
+          skip_after_successful_duplicate: 'true'
+          do_not_skip: '["pull_request", "workflow_dispatch", "schedule"]'
 
   build-docs:
     #Continue if checks-for-duplicates found no duplicates. Always runs for pull-requests.
-    
+    needs: checks-for-duplicates
+    if: ${{ env.ACT || needs.checks-for-duplicates.outputs.should_skip != 'true' }}
     name: cFE Documentation
     runs-on: ubuntu-18.04
 
@@ -44,6 +57,7 @@ jobs:
 
       # Upload documentation logs as artifacts
       - name: Archive Documentation Build Logs
+        if: ${{ !env.ACT}}
         uses: actions/upload-artifact@v2
         with:
           name: cFS Docs Artifacts
@@ -60,7 +74,8 @@ jobs:
 
   build-usersguide:
     # Name the Job
-   
+    needs: checks-for-duplicates
+    if: ${{ env.ACT || needs.checks-for-duplicates.outputs.should_skip != 'true' }}
     name: Users Guide
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
@@ -92,6 +107,7 @@ jobs:
           mv build/doc/warnings.log usersguide_warnings.log
 
       - name: Archive Users Guide Build Logs
+        if: ${{ !env.ACT}}
         uses: actions/upload-artifact@v2
         with:
           name: Users Guide Artifacts
@@ -143,7 +159,8 @@ jobs:
 
   build-osalguide:
     # Name the Job
-    
+    needs: checks-for-duplicates
+    if: ${{ env.ACT || needs.checks-for-duplicates.outputs.should_skip != 'true' }}
     name: Osal Guide
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
@@ -176,6 +193,7 @@ jobs:
 
 
       - name: Archive Osal Guide Build Logs
+        if: ${{ !env.ACT}}
         uses: actions/upload-artifact@v2
         with:
           name: OSAL Guide Artifacts
@@ -208,7 +226,7 @@ jobs:
         if: ${{ github.event_name == 'push' && contains(github.ref, 'main')}}
         run: |
           mkdir deploy
-          cd ./build/doc/osalguide/apiguide/latex
+          cd ./build/doc/osalguide/latex
           make > build.txt
           mv refman.pdf $GITHUB_WORKSPACE/deploy/OSAL_Users_Guide.pdf
           # Could add pandoc and convert to github markdown

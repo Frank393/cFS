@@ -1,6 +1,7 @@
 unbuffer act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/build-cfs.yml |& tee build-cfs.txt &
 gnome-terminal -- bash -c "unbuffer act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/build-cfs-deprecated.yml |& tee build-cfs-deprecated.txt" &
 gnome-terminal -- bash -c "unbuffer act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/changelog.yml |& tee changelog.txt"  &
+gnome-terminal -- bash -c "unbuffer act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/changelog.yml |& tee changelog.txt"  &
 gnome-terminal -- bash -c "unbuffer act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/codeql-build.yml |& tee codeql-build.txt" &
 gnome-terminal -- bash -c "unbuffer act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/static-analysis.yml |& tee static-analysis.txt" &
-gnome-terminal -- bash -c "unbuffer act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/build-documentation.yml |& tee build-documentation.txt"  
+gnome-terminal -- bash -c "unbuffer act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/build-documentation.yml |& tee build-documentation.txt" 
