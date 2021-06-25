@@ -15,8 +15,8 @@ jobs:
   check-for-duplicates:
     runs-on: ubuntu-latest
     # Map a step output to a job output
+    if: ${{ env.ACT == 'false' }}
     outputs:
-        if: ${{ env.ACT == 'false' }}
         should_skip: ${{ steps.skip_check.outputs.should_skip }}
     steps:
       - id: skip_check
