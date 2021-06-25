@@ -14,7 +14,7 @@ jobs:
   #Checks for duplicate actions. Skips push actions if there is a matching or duplicate pull-request action. 
 
   check-for-duplicates:
-    if: ${{ !ACT}}
+    if: ${{ env.ACT == false }}
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
@@ -29,7 +29,7 @@ jobs:
   build-cfs:
     #Continue if check-for-duplicates found no duplicates. Always runs for pull-requests.
     needs: check-for-duplicates
-    if: ${{ env.ACT || needs.check-for-duplicates.outputs.should_skip != 'true' }}
+    if: ${{ env.ACT == 'true' || needs.check-for-duplicates.outputs.should_skip != 'true' }}
    
     name: Build
     runs-on: ubuntu-18.04
