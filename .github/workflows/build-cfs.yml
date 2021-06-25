@@ -8,12 +8,13 @@ on:
 env:
   SIMULATION: native
   OMIT_DEPRECATED: true
-  ACT: false
 
 jobs:
   #Checks for duplicate actions. Skips push actions if there is a matching or duplicate pull-request action. 
-
+ 
   check-for-duplicates:
+    env:
+     ACT: false
     if: ${{ env.ACT == false }}
     runs-on: ubuntu-latest
     # Map a step output to a job output
