@@ -12,6 +12,7 @@ env:
 
 jobs:
   #Checks for duplicate actions. Skips push actions if there is a matching or duplicate pull-request action. 
+
   check-for-duplicates:
     if: ${{ !env.ACT}}
     runs-on: ubuntu-latest
@@ -41,7 +42,7 @@ jobs:
     # Set the type of machine to run on
     env:
       BUILDTYPE: ${{ matrix.buildtype }}
-      
+      ACT : false
     steps:
       # Check out the cfs bundle
       - name: Checkout code
