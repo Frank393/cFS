@@ -6,6 +6,7 @@ on:
   pull_request:
 
 env:
+  ACT: false
   SIMULATION: native
   OMIT_DEPRECATED: true
 
@@ -13,11 +14,9 @@ jobs:
   #Checks for duplicate actions. Skips push actions if there is a matching or duplicate pull-request action. 
  
   check-for-duplicates:
-    env:
-     ACT: false
-    if: ${{ env.ACT == false }}
     runs-on: ubuntu-latest
     # Map a step output to a job output
+    if: ${{ env.ACT == 'false' }}
     outputs:
         should_skip: ${{ steps.skip_check.outputs.should_skip }}
     steps:
@@ -43,7 +42,6 @@ jobs:
     # Set the type of machine to run on
     env:
       BUILDTYPE: ${{ matrix.buildtype }}
-      ACT: false
     steps:
       # Check out the cfs bundle
       - name: Checkout code
