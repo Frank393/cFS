@@ -1,0 +1,17 @@
+name: ACT_Test
+
+# Run every time a new commit pushed or for pull requests
+on:
+  push:
+  pull_request:
+
+env:
+  ACT: false
+jobs:
+  ACT_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Hello world"
+        if: ${{ env.ACT == 'false' }}
+        run: echo "ACT worked"
+    
