@@ -8,9 +8,9 @@ on:
 env:
   ACT: false
 jobs:
-  if: ${{ env.ACT == 'false' }}
   ACT_job:
     runs-on: ubuntu-latest
+    if: ${{ env.ACT == 'false' }}
     steps:
       - name: "Hello world"
         run: echo "ACT worked"
