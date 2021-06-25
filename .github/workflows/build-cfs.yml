@@ -42,7 +42,7 @@ jobs:
     # Set the type of machine to run on
     env:
       BUILDTYPE: ${{ matrix.buildtype }}
-      ACT : false
+      ACT : ${{ false }}
     steps:
       # Check out the cfs bundle
       - name: Checkout code
