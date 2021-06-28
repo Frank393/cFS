@@ -28,7 +28,7 @@ jobs:
   build-cfs:
     #Continue if check-for-duplicates found no duplicates. Always runs for pull-requests.
     needs: check-for-duplicates
-    if: ${{ env.ACT == 'true' && needs.check-for-duplicates.outputs.should_skip != 'true' }}
+    if: ${{ needs.check-for-duplicates.outputs.should_skip != 'true' || env.ACT == 'true' }}
    
     name: Build
     runs-on: ubuntu-18.04
