@@ -28,7 +28,7 @@ jobs:
   build-cfs:
     #Continue if check-for-duplicates found no duplicates. Always runs for pull-requests.
     needs: check-for-duplicates
-    if: ${{ needs.check-for-duplicates.outputs.should_skip != 'true' }}
+    if: ${{ env.ACT == 'true' || needs.check-for-duplicates.outputs.should_skip != 'true' }}
    
     name: Build
     runs-on: ubuntu-18.04
@@ -40,6 +40,7 @@ jobs:
 
     # Set the type of machine to run on
     env:
+      ACT: false
       BUILDTYPE: ${{ matrix.buildtype }}
     steps:
       # Check out the cfs bundle
