@@ -29,6 +29,7 @@ jobs:
     #Continue if check-for-duplicates found no duplicates. Always runs for pull-requests.
     env:
       ACT: false
+      BUILDTYPE: ${{ matrix.buildtype }}
     needs: check-for-duplicates
     if: ${{ env.ACT == 'true' || needs.check-for-duplicates.outputs.should_skip != 'true' }}
    
@@ -41,9 +42,7 @@ jobs:
         buildtype: [debug, release]
 
     # Set the type of machine to run on
-    env:
-      ACT: false
-      BUILDTYPE: ${{ matrix.buildtype }}
+    
     steps:
       # Check out the cfs bundle
       - name: Checkout code
