@@ -27,7 +27,7 @@ jobs:
   build-docs:
     #Continue if checks-for-duplicates found no duplicates. Always runs for pull-requests.
     needs: checks-for-duplicates
-    if: ${{ env.ACT || needs.checks-for-duplicates.outputs.should_skip != 'true' }}
+    if: ${{ needs.checks-for-duplicates.outputs.should_skip != 'true' }}
     name: cFE Documentation
     runs-on: ubuntu-18.04
 
@@ -75,7 +75,7 @@ jobs:
   build-usersguide:
     # Name the Job
     needs: checks-for-duplicates
-    if: ${{ env.ACT || needs.checks-for-duplicates.outputs.should_skip != 'true' }}
+    if: ${{ needs.checks-for-duplicates.outputs.should_skip != 'true' }}
     name: Users Guide
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
@@ -160,7 +160,7 @@ jobs:
   build-osalguide:
     # Name the Job
     needs: checks-for-duplicates
-    if: ${{ env.ACT || needs.checks-for-duplicates.outputs.should_skip != 'true' }}
+    if: ${{ needs.checks-for-duplicates.outputs.should_skip != 'true' }}
     name: Osal Guide
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
