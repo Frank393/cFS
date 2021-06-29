@@ -109,7 +109,7 @@ jobs:
           mv build/doc/warnings.log usersguide_warnings.log
 
       - name: Archive Users Guide Build Logs
-      #  if: ${{ !env.ACT}}
+        if: ${{ !env.ACT}}
         uses: actions/upload-artifact@v2
         with:
           name: Users Guide Artifacts
@@ -195,7 +195,7 @@ jobs:
 
 
       - name: Archive Osal Guide Build Logs
-      #  if: ${{ !env.ACT}}
+        if: ${{ !env.ACT}}
         uses: actions/upload-artifact@v2
         with:
           name: OSAL Guide Artifacts
