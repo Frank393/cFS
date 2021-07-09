@@ -15,6 +15,7 @@ RUN curl -o git.tar.gz https://mirrors.edge.kernel.org/pub/software/scm/git/git-
 RUN tar -zxf git.tar.gz
 RUN cd git-* && make prefix=/usr/local && make prefix=/usr/local install
 RUN apt-get purge -y libz-dev libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext gcc
+RUN curl https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
 
 RUN git --version
 # Install dependencies for build-cfs
