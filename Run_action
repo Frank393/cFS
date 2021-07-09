@@ -1,6 +1,0 @@
-act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/build-cfs.yml &
-gnome-terminal -- act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/build-cfs-deprecated.yml &
-gnome-terminal -- act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/changelog.yml  &
-gnome-terminal -- act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/codeql-build.yml &
-gnome-terminal -- act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/static-analysis.yml &
-gnome-terminal -- act -P ubuntu-18.04=ghcr.io/nmullane/cfs_image_test -W ./.github/workflows/build-documentation.yml 

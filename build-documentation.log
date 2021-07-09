@@ -1,0 +1,369 @@
+[33m[Documentation and Guides/Osal Guide           ] [0m🚀  Start image=docker.pkg.github.com/frank393/images/cfs_act
+[32m[Documentation and Guides/Users Guide          ] [0m🚀  Start image=docker.pkg.github.com/frank393/images/cfs_act
+[35m[Documentation and Guides/cFE Documentation    ] [0m🚀  Start image=docker.pkg.github.com/frank393/images/cfs_act
+[32m[Documentation and Guides/Users Guide          ] [0m  🐳  docker run image=docker.pkg.github.com/frank393/images/cfs_act platform= entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
+[35m[Documentation and Guides/cFE Documentation    ] [0m  🐳  docker run image=docker.pkg.github.com/frank393/images/cfs_act platform= entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
+[33m[Documentation and Guides/Osal Guide           ] [0m  🐳  docker run image=docker.pkg.github.com/frank393/images/cfs_act platform= entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
+[32m[Documentation and Guides/Users Guide          ] [0m  🐳  docker exec cmd=[mkdir -m 0777 -p /var/run/act] user=root
+[32m[Documentation and Guides/Users Guide          ] [0m  🐳  docker cp src=/root/test/cFS/. dst=/root/test/cFS
+[32m[Documentation and Guides/Users Guide          ] [0m  🐳  docker exec cmd=[mkdir -p /root/test/cFS] user=
+[32m[Documentation and Guides/Users Guide          ] [0m⭐  Run Checkout code
+[32m[Documentation and Guides/Users Guide          ] [0m  ✅  Success - Checkout code
+[32m[Documentation and Guides/Users Guide          ] [0m⭐  Run Copy Files
+[35m[Documentation and Guides/cFE Documentation    ] [0m  🐳  docker exec cmd=[mkdir -m 0777 -p /var/run/act] user=root
+[33m[Documentation and Guides/Osal Guide           ] [0m  🐳  docker exec cmd=[mkdir -m 0777 -p /var/run/act] user=root
+[32m[Documentation and Guides/Users Guide          ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/1] user=
+[33m[Documentation and Guides/Osal Guide           ] [0m  🐳  docker cp src=/root/test/cFS/. dst=/root/test/cFS
+[33m[Documentation and Guides/Osal Guide           ] [0m  🐳  docker exec cmd=[mkdir -p /root/test/cFS] user=
+[35m[Documentation and Guides/cFE Documentation    ] [0m  🐳  docker cp src=/root/test/cFS/. dst=/root/test/cFS
+[35m[Documentation and Guides/cFE Documentation    ] [0m  🐳  docker exec cmd=[mkdir -p /root/test/cFS] user=
+[32m[Documentation and Guides/Users Guide          ] [0m  ✅  Success - Copy Files
+[32m[Documentation and Guides/Users Guide          ] [0m⭐  Run Make Prep
+[32m[Documentation and Guides/Users Guide          ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/2] user=
+[32m|[0m mkdir -p "build"
+[32m|[0m (cd "build" && cmake  -DCMAKE_INSTALL_PREFIX=/exe -DCMAKE_BUILD_TYPE=debug "/root/test/cFS/cfe")
+[33m[Documentation and Guides/Osal Guide           ] [0m⭐  Run Checkout code
+[33m[Documentation and Guides/Osal Guide           ] [0m  ✅  Success - Checkout code
+[33m[Documentation and Guides/Osal Guide           ] [0m⭐  Run Copy Files
+[33m[Documentation and Guides/Osal Guide           ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/1] user=
+[33m[Documentation and Guides/Osal Guide           ] [0m  ✅  Success - Copy Files
+[33m[Documentation and Guides/Osal Guide           ] [0m⭐  Run Make Prep
+[33m[Documentation and Guides/Osal Guide           ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/2] user=
+[33m|[0m mkdir -p "build"
+[33m|[0m (cd "build" && cmake  -DCMAKE_INSTALL_PREFIX=/exe -DCMAKE_BUILD_TYPE=debug "/root/test/cFS/cfe")
+[35m[Documentation and Guides/cFE Documentation    ] [0m⭐  Run Install Dependencies
+[32m|[0m -- The C compiler identification is GNU 7.5.0
+[35m[Documentation and Guides/cFE Documentation    ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/0] user=
+[33m|[0m -- The C compiler identification is GNU 7.5.0
+[32m|[0m -- Check for working C compiler: /usr/bin/cc
+[33m|[0m -- Check for working C compiler: /usr/bin/cc
+[33m|[0m -- Check for working C compiler: /usr/bin/cc -- works
+[32m|[0m -- Check for working C compiler: /usr/bin/cc -- works
+[33m|[0m -- Detecting C compiler ABI info
+[32m|[0m -- Detecting C compiler ABI info
+[33m|[0m -- Detecting C compiler ABI info - done
+[33m|[0m -- Detecting C compile features
+[32m|[0m -- Detecting C compiler ABI info - done
+[32m|[0m -- Detecting C compile features
+[33m|[0m -- Detecting C compile features - done
+[32m|[0m -- Detecting C compile features - done
+[32m|[0m -- Mission configuration sample automatically selected
+[32m|[0m -- OMIT_DEPRECATED=false: Deprecated elements included in build
+[32m|[0m -- Search path for modules: apps;libs;psp/fsw/modules;cfe/modules
+[32m|[0m -- Module 'core_api' found at /root/test/cFS/cfe/modules/core_api
+[32m|[0m -- Module 'core_private' found at /root/test/cFS/cfe/modules/core_private
+[32m|[0m -- Module 'ci_lab' found at /root/test/cFS/apps/ci_lab
+[32m|[0m -- Module 'to_lab' found at /root/test/cFS/apps/to_lab
+[32m|[0m -- Module 'sch_lab' found at /root/test/cFS/apps/sch_lab
+[32m|[0m -- Module 'cfe_assert' found at /root/test/cFS/cfe/modules/cfe_assert
+[32m|[0m -- Module 'sample_app' found at /root/test/cFS/apps/sample_app
+[32m|[0m -- Module 'sample_lib' found at /root/test/cFS/apps/sample_lib
+[32m|[0m -- Module 'es' found at /root/test/cFS/cfe/modules/es
+[32m|[0m -- Module 'evs' found at /root/test/cFS/cfe/modules/evs
+[32m|[0m -- Module 'fs' found at /root/test/cFS/cfe/modules/fs
+[32m|[0m -- Module 'sb' found at /root/test/cFS/cfe/modules/sb
+[32m|[0m -- Module 'tbl' found at /root/test/cFS/cfe/modules/tbl
+[32m|[0m -- Module 'time' found at /root/test/cFS/cfe/modules/time
+[32m|[0m -- Module 'osal' found at /root/test/cFS/osal
+[32m|[0m -- Module 'psp' found at /root/test/cFS/psp
+[32m|[0m -- Module 'msg' found at /root/test/cFS/cfe/modules/msg
+[32m|[0m -- Module 'sbr' found at /root/test/cFS/cfe/modules/sbr
+[32m|[0m -- Module 'resourceid' found at /root/test/cFS/cfe/modules/resourceid
+[32m|[0m -- Generated cfe_mission_cfg.h from /root/test/cFS/sample_defs configuration
+[32m|[0m -- Generated cfe_perfids.h from /root/test/cFS/sample_defs configuration
+[32m|[0m -- Using /root/test/cFS/cfe/modules/msg/option_inc/default_cfe_msg_hdr_pri.h for cfe_msg_hdr.h
+[32m|[0m -- Using /root/test/cFS/cfe/modules/msg/option_inc/default_cfe_msg_sechdr.h for cfe_msg_sechdr.h
+[32m|[0m -- Using /root/test/cFS/cfe/modules/resourceid/option_inc/cfe_resourceid_simple.h for cfe_resourceid_typedef.h
+[33m|[0m -- Mission configuration sample automatically selected
+[33m|[0m -- OMIT_DEPRECATED=false: Deprecated elements included in build
+[33m|[0m -- Search path for modules: apps;libs;psp/fsw/modules;cfe/modules
+[33m|[0m -- Module 'core_api' found at /root/test/cFS/cfe/modules/core_api
+[33m|[0m -- Module 'core_private' found at /root/test/cFS/cfe/modules/core_private
+[33m|[0m -- Module 'ci_lab' found at /root/test/cFS/apps/ci_lab
+[33m|[0m -- Module 'to_lab' found at /root/test/cFS/apps/to_lab
+[33m|[0m -- Module 'sch_lab' found at /root/test/cFS/apps/sch_lab
+[33m|[0m -- Module 'cfe_assert' found at /root/test/cFS/cfe/modules/cfe_assert
+[33m|[0m -- Module 'sample_app' found at /root/test/cFS/apps/sample_app
+[33m|[0m -- Module 'sample_lib' found at /root/test/cFS/apps/sample_lib
+[33m|[0m -- Module 'es' found at /root/test/cFS/cfe/modules/es
+[33m|[0m -- Module 'evs' found at /root/test/cFS/cfe/modules/evs
+[33m|[0m -- Module 'fs' found at /root/test/cFS/cfe/modules/fs
+[33m|[0m -- Module 'sb' found at /root/test/cFS/cfe/modules/sb
+[33m|[0m -- Module 'tbl' found at /root/test/cFS/cfe/modules/tbl
+[33m|[0m -- Module 'time' found at /root/test/cFS/cfe/modules/time
+[33m|[0m -- Module 'osal' found at /root/test/cFS/osal
+[33m|[0m -- Module 'psp' found at /root/test/cFS/psp
+[33m|[0m -- Module 'msg' found at /root/test/cFS/cfe/modules/msg
+[33m|[0m -- Module 'sbr' found at /root/test/cFS/cfe/modules/sbr
+[33m|[0m -- Module 'resourceid' found at /root/test/cFS/cfe/modules/resourceid
+[33m|[0m -- Generated cfe_mission_cfg.h from /root/test/cFS/sample_defs configuration
+[33m|[0m -- Generated cfe_perfids.h from /root/test/cFS/sample_defs configuration
+[33m|[0m -- Using /root/test/cFS/cfe/modules/msg/option_inc/default_cfe_msg_hdr_pri.h for cfe_msg_hdr.h
+[33m|[0m -- Using /root/test/cFS/cfe/modules/msg/option_inc/default_cfe_msg_sechdr.h for cfe_msg_sechdr.h
+[33m|[0m -- Using /root/test/cFS/cfe/modules/resourceid/option_inc/cfe_resourceid_simple.h for cfe_resourceid_typedef.h
+[32m|[0m -- Configuring for system arch: native/default_cpu1
+[33m|[0m -- Configuring for system arch: native/default_cpu1
+[32m|[0m -- The C compiler identification is GNU 7.5.0
+[32m|[0m -- Check for working C compiler: /usr/bin/cc
+[33m|[0m -- The C compiler identification is GNU 7.5.0
+[33m|[0m -- Check for working C compiler: /usr/bin/cc
+[32m|[0m -- Check for working C compiler: /usr/bin/cc -- works
+[32m|[0m -- Detecting C compiler ABI info
+[33m|[0m -- Check for working C compiler: /usr/bin/cc -- works
+[33m|[0m -- Detecting C compiler ABI info
+[32m|[0m -- Detecting C compiler ABI info - done
+[32m|[0m -- Detecting C compile features
+[33m|[0m -- Detecting C compiler ABI info - done
+[33m|[0m -- Detecting C compile features
+[33m|[0m -- Detecting C compile features - done
+[33m|[0m -- OMIT_DEPRECATED=false: Deprecated elements included in build
+[33m|[0m -- Generated cfe_msgids.h from /root/test/cFS/sample_defs configuration
+[33m|[0m -- Generated cfe_platform_cfg.h from /root/test/cFS/sample_defs configuration
+[33m|[0m -- BSP Selection: generic-linux at /root/test/cFS/osal/src/bsp/generic-linux
+[33m|[0m -- OSAL Compile Definitions: SIMULATION=native;_LINUX_OS_;_XOPEN_SOURCE=600
+[32m|[0m -- Detecting C compile features - done
+[32m|[0m -- OMIT_DEPRECATED=false: Deprecated elements included in build
+[32m|[0m -- Generated cfe_msgids.h from /root/test/cFS/sample_defs configuration
+[32m|[0m -- Generated cfe_platform_cfg.h from /root/test/cFS/sample_defs configuration
+[33m|[0m -- OSAL Selection: posix at /root/test/cFS/osal/src/os/posix
+[33m|[0m -- PSP Selection: pc-linux
+[33m|[0m -- Building Core Module: core_api
+[33m|[0m -- Building Core Module: core_private
+[33m|[0m -- Building Core Module: es
+[33m|[0m -- Building Core Module: evs
+[33m|[0m -- Building Core Module: fs
+[33m|[0m -- Building Core Module: sb
+[33m|[0m -- Building Core Module: tbl
+[32m|[0m -- BSP Selection: generic-linux at /root/test/cFS/osal/src/bsp/generic-linux
+[32m|[0m -- OSAL Compile Definitions: SIMULATION=native;_LINUX_OS_;_XOPEN_SOURCE=600
+[32m|[0m -- OSAL Selection: posix at /root/test/cFS/osal/src/os/posix
+[33m|[0m -- Building Core Module: time
+[33m|[0m -- Building Core Module: psp
+[33m|[0m -- Building Core Module: msg
+[33m|[0m -- CCSDS primary header included in message header (not including CCSDS extended header)
+[33m|[0m -- Message Id version 1 in use (MsgId V1)
+[32m|[0m -- PSP Selection: pc-linux
+[32m|[0m -- Building Core Module: core_api
+[33m|[0m -- Building Core Module: sbr
+[33m|[0m -- Using direct map software bus routing implementation
+[33m|[0m -- Building Core Module: resourceid
+[33m|[0m -- Building Dynamic App: ci_lab targets=cpu1
+[33m|[0m -- Building Dynamic App: to_lab targets=cpu1
+[32m|[0m -- Building Core Module: core_private
+[33m|[0m NOTE: "TO_LAB_Subs" passed to add_cfe_tables is not a previously-defined application target
+[33m|[0m NOTE: Selected /root/test/cFS/apps/to_lab/fsw/tables/to_lab_sub.c as source for TO_LAB_Subs.to_lab_sub on cpu1
+[33m|[0m -- Building Dynamic App: sch_lab targets=cpu1
+[33m|[0m NOTE: "sch_lab_table" passed to add_cfe_tables is not a previously-defined application target
+[33m|[0m NOTE: Selected /root/test/cFS/apps/sch_lab/fsw/tables/sch_lab_table.c as source for sch_lab_table.sch_lab_table on cpu1
+[33m|[0m -- Building Dynamic App: cfe_assert targets=cpu1
+[33m|[0m -- Building Dynamic App: sample_app targets=cpu1
+[33m|[0m NOTE: "sampleAppTable" passed to add_cfe_tables is not a previously-defined application target
+[33m|[0m NOTE: Selected /root/test/cFS/apps/sample_app/fsw/tables/sample_app_tbl.c as source for sampleAppTable.sample_app_tbl on cpu1
+[33m|[0m -- Building Dynamic App: sample_lib targets=cpu1
+[33m|[0m NOTE: Selected /root/test/cFS/sample_defs/cpu1_cfe_es_startup.scr as source for cfe_es_startup.scr on cpu1
+[32m|[0m -- Building Core Module: es
+[32m|[0m -- Building Core Module: evs
+[32m|[0m -- Building Core Module: fs
+[32m|[0m -- Building Core Module: sb
+[33m|[0m -- Configuring done
+[32m|[0m -- Building Core Module: tbl
+[32m|[0m -- Building Core Module: time
+[32m|[0m -- Building Core Module: psp
+[32m|[0m -- Building Core Module: msg
+[32m|[0m -- CCSDS primary header included in message header (not including CCSDS extended header)
+[32m|[0m -- Message Id version 1 in use (MsgId V1)
+[32m|[0m -- Building Core Module: sbr
+[32m|[0m -- Using direct map software bus routing implementation
+[32m|[0m -- Building Core Module: resourceid
+[32m|[0m -- Building Dynamic App: ci_lab targets=cpu1
+[32m|[0m -- Building Dynamic App: to_lab targets=cpu1
+[32m|[0m NOTE: "TO_LAB_Subs" passed to add_cfe_tables is not a previously-defined application target
+[32m|[0m NOTE: Selected /root/test/cFS/apps/to_lab/fsw/tables/to_lab_sub.c as source for TO_LAB_Subs.to_lab_sub on cpu1
+[32m|[0m -- Building Dynamic App: sch_lab targets=cpu1
+[32m|[0m NOTE: "sch_lab_table" passed to add_cfe_tables is not a previously-defined application target
+[32m|[0m NOTE: Selected /root/test/cFS/apps/sch_lab/fsw/tables/sch_lab_table.c as source for sch_lab_table.sch_lab_table on cpu1
+[32m|[0m -- Building Dynamic App: cfe_assert targets=cpu1
+[32m|[0m -- Building Dynamic App: sample_app targets=cpu1
+[32m|[0m NOTE: "sampleAppTable" passed to add_cfe_tables is not a previously-defined application target
+[32m|[0m NOTE: Selected /root/test/cFS/apps/sample_app/fsw/tables/sample_app_tbl.c as source for sampleAppTable.sample_app_tbl on cpu1
+[32m|[0m -- Building Dynamic App: sample_lib targets=cpu1
+[32m|[0m NOTE: Selected /root/test/cFS/sample_defs/cpu1_cfe_es_startup.scr as source for cfe_es_startup.scr on cpu1
+[32m|[0m -- Configuring done
+[33m|[0m -- Generating done
+[33m|[0m -- Build files have been written to: /root/test/cFS/build/native/default_cpu1
+[33m|[0m -- Configuring done
+[32m|[0m -- Generating done
+[33m|[0m -- Generating done
+[33m|[0m -- Build files have been written to: /root/test/cFS/build
+[32m|[0m -- Build files have been written to: /root/test/cFS/build/native/default_cpu1
+[33m|[0m echo " -DCMAKE_INSTALL_PREFIX=/exe -DCMAKE_BUILD_TYPE=debug" > "build/.prep"
+[32m|[0m -- Configuring done
+[32m|[0m -- Generating done
+[33m[Documentation and Guides/Osal Guide           ] [0m  ✅  Success - Make Prep
+[32m|[0m -- Build files have been written to: /root/test/cFS/build
+[32m|[0m echo " -DCMAKE_INSTALL_PREFIX=/exe -DCMAKE_BUILD_TYPE=debug" > "build/.prep"
+[32m[Documentation and Guides/Users Guide          ] [0m  ✅  Success - Make Prep
+[32m[Documentation and Guides/Users Guide          ] [0m⭐  Run Install Dependencies
+[33m[Documentation and Guides/Osal Guide           ] [0m⭐  Run Install Dependencies
+[32m[Documentation and Guides/Users Guide          ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/3] user=
+[33m[Documentation and Guides/Osal Guide           ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/3] user=
+[35m|[0m Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 14%Reading package lists... 22%Reading package lists... 35%Reading package lists... 45%Reading package lists... 52%Reading package lists... 56%Reading package lists... 56%Reading package lists... 56%Reading package lists... 56%Reading package lists... 63%Reading package lists... 68%Reading package lists... 68%Reading package lists... 70%Reading package lists... 70%Reading package lists... 75%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 90%Reading package lists... 90%Reading package lists... 92%Reading package lists... 92%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+[32m|[0m Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 15%Reading package lists... 26%Reading package lists... 37%Reading package lists... 46%Reading package lists... 54%Reading package lists... 56%Reading package lists... 56%Reading package lists... 56%Reading package lists... 56%Reading package lists... 65%Reading package lists... 68%Reading package lists... 68%Reading package lists... 70%Reading package lists... 70%Reading package lists... 79%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 90%Reading package lists... 90%Reading package lists... 92%Reading package lists... 92%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+[33m|[0m Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 6%Reading package lists... 13%Reading package lists... 25%Reading package lists... 36%Reading package lists... 44%Reading package lists... 52%Reading package lists... 56%Reading package lists... 56%Reading package lists... 56%Reading package lists... 56%Reading package lists... 63%Reading package lists... 68%Reading package lists... 68%Reading package lists... 70%Reading package lists... 70%Reading package lists... 78%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 90%Reading package lists... 90%Reading package lists... 92%Reading package lists... 92%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+[32m|[0m Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 73%Building dependency tree       
+[32m|[0m Reading state information... 0%Reading state information... 0%Reading state information... Done
+[33m|[0m Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 74%Building dependency tree       
+[35m|[0m Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 63%Building dependency tree... 92%Building dependency tree       
+[35m|[0m Reading state information... 0%Reading state information... 0%Reading state information... Done
+[33m|[0m Reading state information... 0%Reading state information... 0%Reading state information... Done
+[32m|[0m doxygen is already the newest version (1.8.13-10).
+[32m|[0m graphviz is already the newest version (2.40.1-2).
+[35m|[0m doxygen is already the newest version (1.8.13-10).
+[35m|[0m graphviz is already the newest version (2.40.1-2).
+[33m|[0m doxygen is already the newest version (1.8.13-10).
+[33m|[0m graphviz is already the newest version (2.40.1-2).
+[32m|[0m The following packages were automatically installed and are no longer required:
+[32m|[0m   curl dirmngr dpkg-dev fakeroot g++-7 gettext-base gnupg gnupg-l10n
+[32m|[0m   gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm
+[32m|[0m   libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+[32m|[0m   libassuan0 libcroco3 libdpkg-perl libfakeroot libfile-fcntllock-perl
+[32m|[0m   libksba8 liblocale-gettext-perl libnpth0 libstdc++-7-dev pinentry-curses
+[32m|[0m Use 'sudo apt autoremove' to remove them.
+[33m|[0m The following packages were automatically installed and are no longer required:
+[33m|[0m   curl dirmngr dpkg-dev fakeroot g++-7 gettext-base gnupg gnupg-l10n
+[33m|[0m   gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm
+[33m|[0m   libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+[33m|[0m   libassuan0 libcroco3 libdpkg-perl libfakeroot libfile-fcntllock-perl
+[33m|[0m   libksba8 liblocale-gettext-perl libnpth0 libstdc++-7-dev pinentry-curses
+[33m|[0m Use 'sudo apt autoremove' to remove them.
+[32m|[0m 0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+[32m[Documentation and Guides/Users Guide          ] [0m  ✅  Success - Install Dependencies
+[35m|[0m The following packages were automatically installed and are no longer required:
+[35m|[0m   curl dirmngr dpkg-dev fakeroot g++-7 gettext-base gnupg gnupg-l10n
+[35m|[0m   gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm
+[35m|[0m   libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+[35m|[0m   libassuan0 libcroco3 libdpkg-perl libfakeroot libfile-fcntllock-perl
+[33m|[0m 0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+[35m|[0m   libksba8 liblocale-gettext-perl libnpth0 libstdc++-7-dev pinentry-curses
+[35m|[0m Use 'sudo apt autoremove' to remove them.
+[33m[Documentation and Guides/Osal Guide           ] [0m  ✅  Success - Install Dependencies
+[35m|[0m 0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+[35m[Documentation and Guides/cFE Documentation    ] [0m  ✅  Success - Install Dependencies
+[32m[Documentation and Guides/Users Guide          ] [0m⭐  Run Build Usersguide
+[35m[Documentation and Guides/cFE Documentation    ] [0m⭐  Run Checkout code
+[35m[Documentation and Guides/cFE Documentation    ] [0m  ✅  Success - Checkout code
+[33m[Documentation and Guides/Osal Guide           ] [0m⭐  Run Build OSAL Guide
+[32m[Documentation and Guides/Users Guide          ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/4] user=
+[33m[Documentation and Guides/Osal Guide           ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/4] user=
+[35m[Documentation and Guides/cFE Documentation    ] [0m⭐  Run Copy Files
+[35m[Documentation and Guides/cFE Documentation    ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/2] user=
+[35m[Documentation and Guides/cFE Documentation    ] [0m  ✅  Success - Copy Files
+[35m[Documentation and Guides/cFE Documentation    ] [0m⭐  Run Make Prep
+[35m[Documentation and Guides/cFE Documentation    ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/3] user=
+[35m|[0m mkdir -p "build"
+[35m|[0m (cd "build" && cmake  -DCMAKE_INSTALL_PREFIX=/exe -DCMAKE_BUILD_TYPE=debug "/root/test/cFS/cfe")
+[35m|[0m -- The C compiler identification is GNU 7.5.0
+[35m|[0m -- Check for working C compiler: /usr/bin/cc
+[35m|[0m -- Check for working C compiler: /usr/bin/cc -- works
+[35m|[0m -- Detecting C compiler ABI info
+[35m|[0m -- Detecting C compiler ABI info - done
+[35m|[0m -- Detecting C compile features
+[35m|[0m -- Detecting C compile features - done
+[35m|[0m -- Mission configuration sample automatically selected
+[35m|[0m -- OMIT_DEPRECATED=false: Deprecated elements included in build
+[35m|[0m -- Search path for modules: apps;libs;psp/fsw/modules;cfe/modules
+[35m|[0m -- Module 'core_api' found at /root/test/cFS/cfe/modules/core_api
+[35m|[0m -- Module 'core_private' found at /root/test/cFS/cfe/modules/core_private
+[35m|[0m -- Module 'ci_lab' found at /root/test/cFS/apps/ci_lab
+[35m|[0m -- Module 'to_lab' found at /root/test/cFS/apps/to_lab
+[35m|[0m -- Module 'sch_lab' found at /root/test/cFS/apps/sch_lab
+[35m|[0m -- Module 'cfe_assert' found at /root/test/cFS/cfe/modules/cfe_assert
+[35m|[0m -- Module 'sample_app' found at /root/test/cFS/apps/sample_app
+[35m|[0m -- Module 'sample_lib' found at /root/test/cFS/apps/sample_lib
+[35m|[0m -- Module 'es' found at /root/test/cFS/cfe/modules/es
+[35m|[0m -- Module 'evs' found at /root/test/cFS/cfe/modules/evs
+[35m|[0m -- Module 'fs' found at /root/test/cFS/cfe/modules/fs
+[35m|[0m -- Module 'sb' found at /root/test/cFS/cfe/modules/sb
+[35m|[0m -- Module 'tbl' found at /root/test/cFS/cfe/modules/tbl
+[35m|[0m -- Module 'time' found at /root/test/cFS/cfe/modules/time
+[35m|[0m -- Module 'osal' found at /root/test/cFS/osal
+[35m|[0m -- Module 'psp' found at /root/test/cFS/psp
+[35m|[0m -- Module 'msg' found at /root/test/cFS/cfe/modules/msg
+[35m|[0m -- Module 'sbr' found at /root/test/cFS/cfe/modules/sbr
+[35m|[0m -- Module 'resourceid' found at /root/test/cFS/cfe/modules/resourceid
+[35m|[0m -- Generated cfe_mission_cfg.h from /root/test/cFS/sample_defs configuration
+[35m|[0m -- Generated cfe_perfids.h from /root/test/cFS/sample_defs configuration
+[35m|[0m -- Using /root/test/cFS/cfe/modules/msg/option_inc/default_cfe_msg_hdr_pri.h for cfe_msg_hdr.h
+[35m|[0m -- Using /root/test/cFS/cfe/modules/msg/option_inc/default_cfe_msg_sechdr.h for cfe_msg_sechdr.h
+[35m|[0m -- Using /root/test/cFS/cfe/modules/resourceid/option_inc/cfe_resourceid_simple.h for cfe_resourceid_typedef.h
+[35m|[0m -- Configuring for system arch: native/default_cpu1
+[35m|[0m -- The C compiler identification is GNU 7.5.0
+[35m|[0m -- Check for working C compiler: /usr/bin/cc
+[35m|[0m -- Check for working C compiler: /usr/bin/cc -- works
+[35m|[0m -- Detecting C compiler ABI info
+[35m|[0m -- Detecting C compiler ABI info - done
+[35m|[0m -- Detecting C compile features
+[35m|[0m -- Detecting C compile features - done
+[35m|[0m -- OMIT_DEPRECATED=false: Deprecated elements included in build
+[35m|[0m -- Generated cfe_msgids.h from /root/test/cFS/sample_defs configuration
+[35m|[0m -- Generated cfe_platform_cfg.h from /root/test/cFS/sample_defs configuration
+[35m|[0m -- BSP Selection: generic-linux at /root/test/cFS/osal/src/bsp/generic-linux
+[35m|[0m -- OSAL Compile Definitions: SIMULATION=native;_LINUX_OS_;_XOPEN_SOURCE=600
+[35m|[0m -- OSAL Selection: posix at /root/test/cFS/osal/src/os/posix
+[35m|[0m -- PSP Selection: pc-linux
+[35m|[0m -- Building Core Module: core_api
+[35m|[0m -- Building Core Module: core_private
+[35m|[0m -- Building Core Module: es
+[35m|[0m -- Building Core Module: evs
+[35m|[0m -- Building Core Module: fs
+[35m|[0m -- Building Core Module: sb
+[35m|[0m -- Building Core Module: tbl
+[35m|[0m -- Building Core Module: time
+[35m|[0m -- Building Core Module: psp
+[35m|[0m -- Building Core Module: msg
+[35m|[0m -- CCSDS primary header included in message header (not including CCSDS extended header)
+[35m|[0m -- Message Id version 1 in use (MsgId V1)
+[35m|[0m -- Building Core Module: sbr
+[35m|[0m -- Using direct map software bus routing implementation
+[35m|[0m -- Building Core Module: resourceid
+[35m|[0m -- Building Dynamic App: ci_lab targets=cpu1
+[35m|[0m -- Building Dynamic App: to_lab targets=cpu1
+[35m|[0m NOTE: "TO_LAB_Subs" passed to add_cfe_tables is not a previously-defined application target
+[35m|[0m NOTE: Selected /root/test/cFS/apps/to_lab/fsw/tables/to_lab_sub.c as source for TO_LAB_Subs.to_lab_sub on cpu1
+[35m|[0m -- Building Dynamic App: sch_lab targets=cpu1
+[35m|[0m NOTE: "sch_lab_table" passed to add_cfe_tables is not a previously-defined application target
+[35m|[0m NOTE: Selected /root/test/cFS/apps/sch_lab/fsw/tables/sch_lab_table.c as source for sch_lab_table.sch_lab_table on cpu1
+[35m|[0m -- Building Dynamic App: cfe_assert targets=cpu1
+[35m|[0m -- Building Dynamic App: sample_app targets=cpu1
+[35m|[0m NOTE: "sampleAppTable" passed to add_cfe_tables is not a previously-defined application target
+[35m|[0m NOTE: Selected /root/test/cFS/apps/sample_app/fsw/tables/sample_app_tbl.c as source for sampleAppTable.sample_app_tbl on cpu1
+[35m|[0m -- Building Dynamic App: sample_lib targets=cpu1
+[35m|[0m NOTE: Selected /root/test/cFS/sample_defs/cpu1_cfe_es_startup.scr as source for cfe_es_startup.scr on cpu1
+[35m|[0m -- Configuring done
+[35m|[0m -- Generating done
+[35m|[0m -- Build files have been written to: /root/test/cFS/build/native/default_cpu1
+[35m|[0m -- Configuring done
+[35m|[0m -- Generating done
+[35m|[0m -- Build files have been written to: /root/test/cFS/build
+[35m|[0m echo " -DCMAKE_INSTALL_PREFIX=/exe -DCMAKE_BUILD_TYPE=debug" > "build/.prep"
+[35m[Documentation and Guides/cFE Documentation    ] [0m  ✅  Success - Make Prep
+[35m[Documentation and Guides/cFE Documentation    ] [0m⭐  Run Build Docs
+[35m[Documentation and Guides/cFE Documentation    ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/4] user=
+[33m[Documentation and Guides/Osal Guide           ] [0m  ✅  Success - Build OSAL Guide
+[33m[Documentation and Guides/Osal Guide           ] [0m⭐  Run Error Check
+[33m[Documentation and Guides/Osal Guide           ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/6] user=
+[33m[Documentation and Guides/Osal Guide           ] [0m  ✅  Success - Error Check
+[33m[Documentation and Guides/Osal Guide           ] [0m⭐  Run Warning Check
+[33m[Documentation and Guides/Osal Guide           ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/7] user=
+[33m[Documentation and Guides/Osal Guide           ] [0m  ✅  Success - Warning Check
+[32m[Documentation and Guides/Users Guide          ] [0m  ✅  Success - Build Usersguide
+[32m[Documentation and Guides/Users Guide          ] [0m⭐  Run Error Check
+[32m[Documentation and Guides/Users Guide          ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/6] user=
+[32m[Documentation and Guides/Users Guide          ] [0m  ✅  Success - Error Check
+[32m[Documentation and Guides/Users Guide          ] [0m⭐  Run Warning Check
+[32m[Documentation and Guides/Users Guide          ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/7] user=
+[32m[Documentation and Guides/Users Guide          ] [0m  ✅  Success - Warning Check
+[35m[Documentation and Guides/cFE Documentation    ] [0m  ✅  Success - Build Docs
+[35m[Documentation and Guides/cFE Documentation    ] [0m⭐  Run Error Check
+[35m[Documentation and Guides/cFE Documentation    ] [0m  🐳  docker exec cmd=[bash --noprofile --norc -e -o pipefail /root/test/cFS/workflow/6] user=
+[35m[Documentation and Guides/cFE Documentation    ] [0m  ✅  Success - Error Check

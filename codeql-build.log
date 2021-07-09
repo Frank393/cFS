@@ -1,0 +1,21 @@
+[33m[CodeQL Analysis/CodeQL-Coding-Standard-Build] [0m🚀  Start image=docker.pkg.github.com/frank393/images/cfs_act
+[32m[CodeQL Analysis/CodeQL-Security-Build       ] [0m🚀  Start image=docker.pkg.github.com/frank393/images/cfs_act
+[33m[CodeQL Analysis/CodeQL-Coding-Standard-Build] [0m  🐳  docker run image=docker.pkg.github.com/frank393/images/cfs_act platform= entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
+[32m[CodeQL Analysis/CodeQL-Security-Build       ] [0m  🐳  docker run image=docker.pkg.github.com/frank393/images/cfs_act platform= entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
+[32m[CodeQL Analysis/CodeQL-Security-Build       ] [0m  🐳  docker exec cmd=[mkdir -m 0777 -p /var/run/act] user=root
+[33m[CodeQL Analysis/CodeQL-Coding-Standard-Build] [0m  🐳  docker exec cmd=[mkdir -m 0777 -p /var/run/act] user=root
+[32m[CodeQL Analysis/CodeQL-Security-Build       ] [0m⭐  Run Checkout code
+[36mINFO[0m[0014]   ☁  git clone 'https://github.com/actions/checkout' # ref=v2 
+[32m[CodeQL Analysis/CodeQL-Security-Build       ] [0m  🐳  docker cp src=/root/.cache/act/actions-checkout@v2/ dst=/var/run/act/actions/actions-checkout@v2/
+[32m[CodeQL Analysis/CodeQL-Security-Build       ] [0m  🐳  docker exec cmd=[mkdir -p /var/run/act/actions/actions-checkout@v2/] user=
+[33m[CodeQL Analysis/CodeQL-Coding-Standard-Build] [0m⭐  Run Checkout code
+[36mINFO[0m[0018]   ☁  git clone 'https://github.com/actions/checkout' # ref=v2 
+[33m[CodeQL Analysis/CodeQL-Coding-Standard-Build] [0m  🐳  docker cp src=/root/.cache/act/actions-checkout@v2/ dst=/var/run/act/actions/actions-checkout@v2/
+[33m[CodeQL Analysis/CodeQL-Coding-Standard-Build] [0m  🐳  docker exec cmd=[mkdir -p /var/run/act/actions/actions-checkout@v2/] user=
+[32m[CodeQL Analysis/CodeQL-Security-Build       ] [0m  🐳  docker exec cmd=[node /var/run/act/actions/actions-checkout@v2/dist/index.js] user=
+[33m[CodeQL Analysis/CodeQL-Coding-Standard-Build] [0m  🐳  docker exec cmd=[node /var/run/act/actions/actions-checkout@v2/dist/index.js] user=
+[32m|[0m OCI runtime exec failed: exec failed: container_linux.go:367: starting container process caused: exec: "node": executable file not found in $PATH: unknown
+[32m[CodeQL Analysis/CodeQL-Security-Build       ] [0m  ❌  Failure - Checkout code
+[33m|[0m OCI runtime exec failed: exec failed: container_linux.go:367: starting container process caused: exec: "node": executable file not found in $PATH: unknown
+[33m[CodeQL Analysis/CodeQL-Coding-Standard-Build] [0m  ❌  Failure - Checkout code
+Error: exit with `FAILURE`: 126
