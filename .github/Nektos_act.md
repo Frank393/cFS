@@ -60,9 +60,12 @@ RUN apt-get install -y cppcheck
 Authenticating to GitHub Package Registry
 `docker login docker.pkg.github.com -u <username> -p <access_token>`
 
-Publishing a package (docker image)
+**Publishing a package (docker image)**
+
 Example of building :`docker build -t docker.pkg.github.com/frank393/images/cfs_act .`
+
 Tagging of the image:`docker.pkg.github.com/owner/repository/image_name:version`
+
 Pushing to Github: `docker push docker.pkg.github.com/frank393/images/cfs_act`
 
 
