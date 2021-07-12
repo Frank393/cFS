@@ -61,7 +61,10 @@ Authenticating to GitHub Package Registry
 `docker login docker.pkg.github.com -u <username> -p <access_token>`
 
 Publishing a package (docker image)
-`docker.pkg.github.com/owner/repository/image_name:version`
+Example of building :`docker build -t docker.pkg.github.com/frank393/images/cfs_act .`
+Tagging of the image:`docker.pkg.github.com/owner/repository/image_name:version`
+Pushing to Github: `docker push docker.pkg.github.com/frank393/images/cfs_act`
+
 
 # **Nektos/act Setup**
 
