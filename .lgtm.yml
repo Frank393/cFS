@@ -1,5 +1,6 @@
 queries:
 - include: "*"
+- include: "github/codeql/cpp/ql/src/JPL_C@main"
 - exclude: "cpp/class-many-fields"
 - exclude: "cpp/long-switch"
 - exclude: "cpp/trivial-switch"
