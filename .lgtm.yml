@@ -1,6 +1,7 @@
 queries:
 - exclude: "*"
-- include: "github/codeql/cpp/ql/src/JPL_C@main"
+- name: JPL Rules
+    uses: github/codeql/cpp/ql/src/JPL_C@main
 - exclude: "cpp/class-many-fields"
 - exclude: "cpp/long-switch"
 - exclude: "cpp/trivial-switch"
