@@ -9,7 +9,7 @@ env:
   ACT: false
   SIMULATION: native
   OMIT_DEPRECATED: true
-  DUPLICATE: false
+  DUP: false
 
 jobs:
   #Checks for duplicate actions. Skips push actions if there is a matching or duplicate pull-request action. 
@@ -21,23 +21,22 @@ jobs:
     steps:
       - id: skip_check
         if: ${{ env.ACT == 'false' }}
+        run: echo "DUP=true" >> $DUP
         uses: fkirc/skip-duplicate-actions@master
         with:
           concurrent_skipping: 'same_content'
           skip_after_successful_duplicate: 'true'
           do_not_skip: '["pull_request", "workflow_dispatch", "schedule"]'
+     
 
-      - name: DUB
-        if: ${{ env.ACT == 'false' }}
-        run: | 
-         echo "DUPLICATE=true" >> $DUPLICATE
+  
   build-cfs:
     #Continue if check-for-duplicates found no duplicates. Always runs for pull-requests.
     env:
       ACT: false
       BUILDTYPE: ${{ matrix.buildtype }}
     needs: check-for-duplicates
-    if: ${{ env.DUPLICATE == 'false' || needs.check-for-duplicates.outputs.should_skip != 'true' }}
+    if: ${{ env.DUP == 'false' }}
    
     name: Build
     runs-on: ubuntu-18.04
@@ -50,6 +49,9 @@ jobs:
     # Set the type of machine to run on
     
     steps:
+      - name: test
+        run: echo "Bruh"
+
       # Check out the cfs bundle
       - name: Checkout code
         uses: actions/checkout@v2
@@ -61,6 +63,7 @@ jobs:
         run: |
           cp ./cfe/cmake/Makefile.sample Makefile
           cp -r ./cfe/cmake/sample_defs sample_defs
+          
 
       # Setup the build system
       - name: Make Prep
@@ -95,6 +98,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: true
+
+      - name: test2
+        run: echo "Bruh2"
 
       # Setup the build system
       - name: Copy Files
