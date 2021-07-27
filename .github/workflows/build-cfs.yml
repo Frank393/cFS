@@ -9,6 +9,7 @@ env:
   ACT: false
   SIMULATION: native
   OMIT_DEPRECATED: true
+  DUPLICATE: false
 
 jobs:
   #Checks for duplicate actions. Skips push actions if there is a matching or duplicate pull-request action. 
@@ -25,13 +26,18 @@ jobs:
           concurrent_skipping: 'same_content'
           skip_after_successful_duplicate: 'true'
           do_not_skip: '["pull_request", "workflow_dispatch", "schedule"]'
+
+      - name: DUB
+        if: ${{ env.ACT == 'false' }}
+        run: | 
+         echo "DUPLICATE=true" >> $DUPLICATE
   build-cfs:
     #Continue if check-for-duplicates found no duplicates. Always runs for pull-requests.
     env:
       ACT: false
       BUILDTYPE: ${{ matrix.buildtype }}
     needs: check-for-duplicates
-    if: ${{ env.ACT == 'true' || needs.check-for-duplicates.outputs.should_skip != 'true' }}
+    if: ${{ env.DUPLICATE == 'false' || needs.check-for-duplicates.outputs.should_skip != 'true' }}
    
     name: Build
     runs-on: ubuntu-18.04
